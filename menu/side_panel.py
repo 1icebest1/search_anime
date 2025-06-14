@@ -44,10 +44,10 @@ class RoundedPanel(QFrame):
         layout.setAlignment(Qt.AlignCenter)
 
         buttons = [
-            ("🏠", "home"),
-            ("🔍", "explore"),
-            ("📚", "library"),
-            ("👤", "account"),
+            ("data/pic_sys/home.png", "home"),
+            ("data/pic_sys/compass.png", "explore"),
+            ("data/pic_sys/library.png", "library"),
+            ("data/pic_sys/profile.png", "account"),
             ("⚙️", "settings"),
             ("❓", "help")
         ]

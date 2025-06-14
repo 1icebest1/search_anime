@@ -4,8 +4,8 @@ import requests
 import logging
 from PySide6.QtCore import QThread, Signal
 
-logging.basicConfig(filename='app.log', level=logging.INFO)
-DATA_DIR = "data/online"
+logging.basicConfig(filename='../app.log', level=logging.INFO)
+DATA_DIR = "../data/online"
 
 
 class AnimeLoaderThread(QThread):

@@ -3,21 +3,21 @@ import sys
 import random
 import os
 from PySide6.QtWidgets import (QApplication, QWidget, QHBoxLayout, QVBoxLayout,
-                               QStackedWidget, QLabel, QMessageBox)
+                               QStackedWidget, QMessageBox)
 from PySide6.QtCore import Qt, QTimer, QPoint, QRect
 from PySide6.QtGui import QPainter, QColor, QLinearGradient, QPixmap
 
-from side_panel import RoundedPanel
-from account import AccountPage
-from explore import ExplorePage
-from library import LibraryPage
-from recommendation import RecommendationPage
-from setting import SettingsPage
-from help import HelpPage
-from detail import DetailPage
-from pars import AnimeLoaderThread
+from menu.side_panel import RoundedPanel
+from menu.account import AccountPage
+from menu.explore import ExplorePage
+from menu.library import LibraryPage
+from menu.recommendation import RecommendationPage
+from menu.setting import SettingsPage
+from menu.help import HelpPage
+from menu.detail import DetailPage
+from script.pars import AnimeLoaderThread
 
-from splash import SplashScreen, LoaderThread
+from script.splash import SplashScreen, LoaderThread
 
 
 class LoadingOverlay(QWidget):

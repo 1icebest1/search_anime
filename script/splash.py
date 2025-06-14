@@ -34,7 +34,7 @@ class SplashScreen(QWidget):
         # Логотип
         self.logo_label = QLabel()
         self.logo_label.setAlignment(Qt.AlignCenter)
-        self.load_image("../data/images/nekoice.png")
+        self.load_image("data/images/nekoice.png")
         layout.addWidget(self.logo_label)
 
         # Прогрес-бар
