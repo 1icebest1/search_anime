@@ -1,0 +1,1177 @@
+[
+  {
+    "title": "Пришелец Муму",
+    "title_ru": "Пришелец Муму",
+    "image": "/storage/releases/posters/9942/e4yX1c0tDgbZUjUbJU6ACeqtaysLV7mA.jpg",
+    "genre": "Комедия, Сейнен, Фантастика",
+    "status": "В работе",
+    "description": "Муму — представитель расы пришельцев, которая потеряла всех своих ученых и инженеров на прошедшей межпланетарной войне\r\nЧтобы вернуть утраченное понимание своих же собственных технологий, Муму вместе со своими друзьями решает отправиться на Землю. Вот только, нормально приземлиться у них не получается, так что они совершают аварийную посадку прямо в квартире девушки по имени Сакурако.\r\nХотя, может, сама девушка таким незваным гостям не особо и рада, но для Муму это настоящая удача! Ведь даже в тесной квартирке простой земной студентки найдётся целая куча бытовых приборов, которые можно неплохо так поизучать.",
+    "description_ru": "Муму — представитель расы пришельцев, которая потеряла всех своих ученых и инженеров на прошедшей межпланетарной войне\r\nЧтобы вернуть утраченное понимание своих же собственных технологий, Муму вместе со своими друзьями решает отправиться на Землю. Вот только, нормально приземлиться у них не получается, так что они совершают аварийную посадку прямо в квартире девушки по имени Сакурако.\r\nХотя, может, сама девушка таким незваным гостям не особо и рада, но для Муму это настоящая удача! Ведь даже в тесной квартирке простой земной студентки найдётся целая куча бытовых приборов, которые можно неплохо так поизучать.",
+    "rating": "Н/Д",
+    "episodes": [
+      {
+        "episode": "1",
+        "title": "Муму и микроволновка",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9942/1/1080/fa874cf21ac166cf4b77070b4c02a4cf.m3u8",
+          "hd": "/videos/media/ts/9942/1/720/21be957fbb2b8e537223281554e42a91.m3u8",
+          "sd": "/videos/media/ts/9942/1/480/0c37937888eb6ab8499d682d171ca902.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9942/1/Giw8t5vIS0Eei5vn__d3c207d988f3ad97e7bcc9b91e6f3a1a.jpg"
+      },
+      {
+        "episode": "2",
+        "title": "Муму и пылесос",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9942/2/1080/5c01b57560e8d7860e0d46500ebacad2.m3u8",
+          "hd": "/videos/media/ts/9942/2/720/8d839ea21480a1fe636a1d7be0447600.m3u8",
+          "sd": "/videos/media/ts/9942/2/480/259a733e5bcf3191ebb5eb549b45a0a8.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9942/2/bIrOjdiekruVGfsw__5bd10470b7651a0e3f149db3bf9ced36.jpg"
+      },
+      {
+        "episode": "3",
+        "title": "Муму и автоматические двери",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9942/3/1080/bb9ce8516ca04131308cc4b7fbcf13d7.m3u8",
+          "hd": "/videos/media/ts/9942/3/720/508aba425eadcb416aa7431c9e72b387.m3u8",
+          "sd": "/videos/media/ts/9942/3/480/d7b3def5d3aaefc54be89b7c9fcd1a89.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9942/3/Edo3Mfrk4FZolorg__ff65c4a5dc94d6558ff6460ce0c2ef9d.jpg"
+      },
+      {
+        "episode": "4",
+        "title": "Тэнкубаши и беспроводная зарядка",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9942/4/1080/8fcd07afa2737c44254945eff655655d.m3u8",
+          "hd": "/videos/media/ts/9942/4/720/5badcf79e457e15d51770e39c8040cf6.m3u8",
+          "sd": "/videos/media/ts/9942/4/480/14371d78a34b6a6856ddc130e2d1244a.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9942/4/VS9GtOvlRHC8vfpo__893be2a1ea21b519b650e4923e93ae06.jpg"
+      },
+      {
+        "episode": "5",
+        "title": "Муму и кондиционер воздуха",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9942/5/1080/bccebfddff8eaac37537d6c2692424ce.m3u8",
+          "hd": "/videos/media/ts/9942/5/720/81961aacf06ab6ce367e9e05ebc82436.m3u8",
+          "sd": "/videos/media/ts/9942/5/480/b1e9c8e768d2b69af57104f9b1e9657d.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9942/5/DUNhFErtXq2Ekj0M__2974026331841208d9d4ad2bd07bc09f.jpg"
+      },
+      {
+        "episode": "6",
+        "title": "Муму и рисоварка",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9942/6/1080/ac1667c98920dc71dc39fb064bf217d7.m3u8",
+          "hd": "/videos/media/ts/9942/6/720/5ced115f1a2cb6ec9a8309ee827fc658.m3u8",
+          "sd": "/videos/media/ts/9942/6/480/2e97f7c1f02d78116de6369812c2f34f.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9942/6/SbKTYxIu3nFdxfNE__f37ef7d73f449a2324c30d3d5ce04929.jpg"
+      },
+      {
+        "episode": "7",
+        "title": "Самэдзу и градусник",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9942/7/1080/a3d3329219e09f53ab26f5d5a845f8f3.m3u8",
+          "hd": "/videos/media/ts/9942/7/720/25b17ba398aa6bbedfcd8e6be2f5b3e1.m3u8",
+          "sd": "/videos/media/ts/9942/7/480/d4cb7741c1b9a5efb348fca1dfca066f.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9942/7/cddyb5Nxsxu3nqqA__7fa1cf958445b29f9c4d544996af800c.jpg"
+      },
+      {
+        "episode": "8",
+        "title": "Муму и розетка",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9942/8/1080/63574ad93d68d0869de1fb77f84e20f2.m3u8",
+          "hd": "/videos/media/ts/9942/8/720/96b84d7652ed99a6a9364692bc9bbd50.m3u8",
+          "sd": "/videos/media/ts/9942/8/480/55ff30d94f3bb2bee1b06832f905079f.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9942/8/Ygy8vFgsU7d4FUL6__c9bae12bd4d7e10878da6e412dc4683f.jpg"
+      },
+      {
+        "episode": "9",
+        "title": "Муму и телевизор",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9942/9/1080/9b7fe7793a614cbb36e5af44b5b28bd4.m3u8",
+          "hd": "/videos/media/ts/9942/9/720/c9fe54c51c0b6f76df05c0911e26dd86.m3u8",
+          "sd": "/videos/media/ts/9942/9/480/63c7d59646cd80890c2c6f10f71cde3e.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9942/9/OdsmZ2uWL4EbxJVS__05d34e5c23bc13f1f90f1a88cc339f70.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Убивая слизней 300 лет, неожиданно взяла максимальный уровень 2",
+    "title_ru": "Убивая слизней 300 лет, неожиданно взяла максимальный уровень 2",
+    "image": "/storage/releases/posters/9903/QtaSwQk5aeBqf7KrvGQD60cqRMG4eCgA.jpg",
+    "genre": "Комедия, Фэнтези",
+    "status": "В работе",
+    "description": "Встретились как-то в исекае слегка перекачанная ведьма, две драконихи, два слизёнка, призрак, эльфийка и демоница и... нет, это не анекдот! Это история про перерождённую Адзусу Аидзаву, что абсолютно случайно нафармила себе максимальный уровень и ну уж очень хотела спокойной жизни без приключений.\r\nТолько вышло всё совсем наоборот: что ни день, то новая весёлая история. И неудивительно, ведь с такой компашкой явно не соскучишься! А это значит что? Правильно! Новая порция забавных эпизодов из жизни ведьминой семейки уже здесь.",
+    "description_ru": "Встретились как-то в исекае слегка перекачанная ведьма, две драконихи, два слизёнка, призрак, эльфийка и демоница и... нет, это не анекдот! Это история про перерождённую Адзусу Аидзаву, что абсолютно случайно нафармила себе максимальный уровень и ну уж очень хотела спокойной жизни без приключений.\r\nТолько вышло всё совсем наоборот: что ни день, то новая весёлая история. И неудивительно, ведь с такой компашкой явно не соскучишься! А это значит что? Правильно! Новая порция забавных эпизодов из жизни ведьминой семейки уже здесь.",
+    "rating": "Н/Д",
+    "episodes": [
+      {
+        "episode": "1",
+        "title": "А вот и богиня",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/1/1080/736c660974adaadcb0be7a9c7ddf5b13.m3u8",
+          "hd": "/videos/media/ts/9903/1/720/81e8dce2895b94424d3cb23874e673aa.m3u8",
+          "sd": "/videos/media/ts/9903/1/480/a083254b5103c70c3029a16b1637a000.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/1/uDswvORXxYDz4eoG__7d9374fe4a5059c62e8d90c56f686e97.jpg"
+      },
+      {
+        "episode": "2",
+        "title": "Мы искали нежить",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/2/1080/adbf80289c708cf6771c52f4cb7076ad.m3u8",
+          "hd": "/videos/media/ts/9903/2/720/8c33ac1b41ed5ead1d655bcf80270769.m3u8",
+          "sd": "/videos/media/ts/9903/2/480/fe394ef1ae7c6b139551fa8c3ab46b1d.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/2/e56q8t5Cr3b4uD7J__f4f7608911d48646fcd254b9637b98e4.jpg"
+      },
+      {
+        "episode": "3",
+        "title": null,
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/3/1080/86b15535ccbd1b4ce9b09c59ee55946c.m3u8",
+          "hd": "/videos/media/ts/9903/3/720/544d7ba43cab52cd5c1f2f39497a380e.m3u8",
+          "sd": "/videos/media/ts/9903/3/480/fb2ddfe85a2e24b42932866d302c486a.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/3/dXQTVxw9dQMXBLsr__338296cc492b974f6d231d48c82a1414.jpg"
+      },
+      {
+        "episode": "4",
+        "title": null,
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/4/1080/01acd69bac2cd957f53cd615784b21c7.m3u8",
+          "hd": "/videos/media/ts/9903/4/720/116e2ea4dd8f279f5e1e44e15bf5a6cb.m3u8",
+          "sd": "/videos/media/ts/9903/4/480/e1444badd7a529d3faf2d217a8b19dcd.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/4/T2hkPPViacEFTh92__838900c4a557dc0be32bae624fc89886.jpg"
+      },
+      {
+        "episode": "5",
+        "title": null,
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/5/1080/54973568d6da698ce21b7c9ea6cfd560.m3u8",
+          "hd": "/videos/media/ts/9903/5/720/e658f1b423cc3c373a01090d8f1ba452.m3u8",
+          "sd": "/videos/media/ts/9903/5/480/1ab2a59ef5a80f28761e1d72d05e0adb.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/5/g6u74QL2vdOVa30u__649703db0ff492545b550f5ed4e5d639.jpg"
+      },
+      {
+        "episode": "6",
+        "title": "Лайка поучаствовала в боевом турнире",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/6/1080/167b335c792a15beb7ef566ddbf973f5.m3u8",
+          "hd": "/videos/media/ts/9903/6/720/780660652edef5d8dd1b1d1c662f2f93.m3u8",
+          "sd": "/videos/media/ts/9903/6/480/a7b0749a9ab180c2b5349db4ef983895.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/6/WrTfs1q48SAKNTiM__0c429b4ac28c34837ca4dc22473928c2.jpg"
+      },
+      {
+        "episode": "7",
+        "title": "Я познакомилась с духом сосны",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/7/1080/c42ac08afd204da1d52815c1853945bc.m3u8",
+          "hd": "/videos/media/ts/9903/7/720/ede1a84562c8b1b4bbbe29839cc66935.m3u8",
+          "sd": "/videos/media/ts/9903/7/480/59231781c957047a35ba978e7bea844c.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/7/Ks4t4MCe36A59lpl__4bfb85b64990b1e2f76dbb7ac242760e.jpg"
+      },
+      {
+        "episode": "8",
+        "title": "Мы поехали на море плавать",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/8/1080/fb5e5271e69d5d46db97e2ebe83372e0.m3u8",
+          "hd": "/videos/media/ts/9903/8/720/ebeb1e2e0d5c8deb13e8b61b35b3bfca.m3u8",
+          "sd": "/videos/media/ts/9903/8/480/7ca1b68cceb37e6f05d54f1222278914.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/8/BtD7zuki9S7EyFE1__48e570fc72427af46e2483440a9f1689.jpg"
+      },
+      {
+        "episode": "9",
+        "title": "Мы встретили царицу злых духов",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/9/1080/c5e648d728a6cb68cd5c98b82807b98f.m3u8",
+          "hd": "/videos/media/ts/9903/9/720/af9dbab573d6830bebdb51cd095c4343.m3u8",
+          "sd": "/videos/media/ts/9903/9/480/fd3cd9edf7e97f86bd053f4f01031036.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/9/yMuvGSqBodG54JQZ__aeda8e131f74d38ea96ce2d52e7fe3a2.jpg"
+      },
+      {
+        "episode": "10",
+        "title": null,
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9903/10/1080/27f446769a68b9805ab4798cffc14687.m3u8",
+          "hd": "/videos/media/ts/9903/10/720/f012ffa2d710a448af8f87c7ca9e28e7.m3u8",
+          "sd": "/videos/media/ts/9903/10/480/786e600bf06de2860a5912a938ff8741.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9903/10/Oi0C9P6a72AQlsJy__2b02c5f7f0dd3c135b8aa08c6923a7f3.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Разгадывание тайн после ужина",
+    "title_ru": "Разгадывание тайн после ужина",
+    "image": "/storage/releases/posters/9937/fbkG06l15gBhlaQ7aqnXF1WO9KtIOjbU.jpg",
+    "genre": "Детектив, Комедия",
+    "status": "В работе",
+    "description": "Рейко Хошо — детектив в отделе полиции — старается браться лишь за действительно сложные и интересные сложные дела. А чтобы разгадывать такие загадки, порой без взгляда со стороны просто не обойтись. Так что, возвращаясь домой, она просит совет... у кого? Разумеется, у своего дворецкого!\r\nВ конце концов, она ведь дочурка генерального директора \"Группы Хошо\", и в компании инспектора Казамацури и своего дворецкого эта юная леди прямо-таки щёлкает дела, как орешки!",
+    "description_ru": "Рейко Хошо — детектив в отделе полиции — старается браться лишь за действительно сложные и интересные сложные дела. А чтобы разгадывать такие загадки, порой без взгляда со стороны просто не обойтись. Так что, возвращаясь домой, она просит совет... у кого? Разумеется, у своего дворецкого!\r\nВ конце концов, она ведь дочурка генерального директора \"Группы Хошо\", и в компании инспектора Казамацури и своего дворецкого эта юная леди прямо-таки щёлкает дела, как орешки!",
+    "rating": "Н/Д",
+    "episodes": [
+      {
+        "episode": "1",
+        "title": "ДОБРО ПОЖАЛОВАТЬ НА УБИЙСТВЕННУЮ ВЕЧЕРИНКУ ФАЙЛ 1",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/1/1080/290aa6a0e7ed528b1d76311435c152f9.m3u8",
+          "hd": "/videos/media/ts/9937/1/720/4a58cd56b360482b1d5343a49ad6eae6.m3u8",
+          "sd": "/videos/media/ts/9937/1/480/39b08b5c825b5fe641740a4af5686b66.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/1/ad8vEpo3Qy4CUUKJ__e31f5ba439f4ff3161075e735ff5e6d6.jpg"
+      },
+      {
+        "episode": "2",
+        "title": "ДОБРО ПОЖАЛОВАТЬ НА ЗАГАДОЧНУЮ ВЕЧЕРИНКУ ФАЙЛ 2",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/2/1080/676162c0a2febc6e1bdebf47af2554d7.m3u8",
+          "hd": "/videos/media/ts/9937/2/720/9461d89f0c6813d80d84b83302ce5c86.m3u8",
+          "sd": "/videos/media/ts/9937/2/480/735fa3783e62387d90222846fee40500.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/2/UoGVSpDxy8bvDnMi__d30a91d4e9f7ac1bdf65820fe1a0d4d6.jpg"
+      },
+      {
+        "episode": "3",
+        "title": "СООБЩЕНИЕ ОТ МЕРТВЕЦА ФАЙЛ 2",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/3/1080/65b2c9c8651eff926ad1b69cedeb69a5.m3u8",
+          "hd": "/videos/media/ts/9937/3/720/5855ec08de2ca97fc95a079f714c7b55.m3u8",
+          "sd": "/videos/media/ts/9937/3/480/7443f413d7d748b062abfb3347f57a3a.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/3/CvpStdWhVZOELHkO__d03cd99e767c8e5f6949de91833b1ed7.jpg"
+      },
+      {
+        "episode": "4",
+        "title": "ПОЖАЛУЙСТА, ИЗБЕГАЙТЕ ИЗМЕН ФАЙЛ 1",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/4/1080/473dd6acde7afb6dd785a32f9cd9eda6.m3u8",
+          "hd": "/videos/media/ts/9937/4/720/e7b9e07fa1e9a7d0d222610783cab299.m3u8",
+          "sd": "/videos/media/ts/9937/4/480/145122cac1ca1665593d00a6ed07027d.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/4/JaOcuKRMqeK3uweh__b57c0073ade693d4be02d9711b896a72.jpg"
+      },
+      {
+        "episode": "5",
+        "title": "ПОЖАЛУЙСТА, ИЗБЕГАЙТЕ ИЗМЕН ФАЙЛ 2",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/5/1080/de6b34d0ab2a706d2181681efb6eb88a.m3u8",
+          "hd": "/videos/media/ts/9937/5/720/7ad469c31f92ffe783874f5c1d48f047.m3u8",
+          "sd": "/videos/media/ts/9937/5/480/d9a17f8e288765163fb0ebf3ea633a1f.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/5/r3TmJ3Zh5HHQUCTQ__4a19f3fca80951c0b793984174d999b1.jpg"
+      },
+      {
+        "episode": "6",
+        "title": "ЧЕЛОВЕК, КОТОРЫЙ ПОТЕРЯЛ ЭТО, — ВИТУБЕР ФАЙЛ 2",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/6/1080/1d42bb6449b99b93c6db43b605e0d69c.m3u8",
+          "hd": "/videos/media/ts/9937/6/720/72172e0faf52af16b9156a3d16300785.m3u8",
+          "sd": "/videos/media/ts/9937/6/480/30088b08aedcedb59e8c6440e68894d5.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/6/5ct05YurLaWUZMLf__ee9add42149d88c5f3945e5a751582cc.jpg"
+      },
+      {
+        "episode": "7",
+        "title": "НЕ СУЩЕСТВУЕТ ПОЛНОСТЬЮ ЗАПЕРТОЙ КОМНАТЫ ФАЙЛ 1",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/7/1080/6bcb6131a335ddadaa85882f9c6d54fe.m3u8",
+          "hd": "/videos/media/ts/9937/7/720/ac972c4a62c5731da2bc6c3afe391474.m3u8",
+          "sd": "/videos/media/ts/9937/7/480/fd46c2e57e6cdf6169c4640c7efb8273.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/7/fMc8YW7cZ4RTLt12__76c8d7ac6d592a7792314b00d878e344.jpg"
+      },
+      {
+        "episode": "8",
+        "title": "ПОЖАЛУЙСТА, НЕ УТОНИТЕ В РЕКЕ ФАЙЛ 1",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/8/1080/f8b5f7bb1bd7562788a14837efd2bc89.m3u8",
+          "hd": "/videos/media/ts/9937/8/720/69085c186b712a513116655a9d5f84ff.m3u8",
+          "sd": "/videos/media/ts/9937/8/480/343859b68773649f28ee4b4c1cca45ed.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/8/UoGZLD1l8XXM2w5b__0e3edabc733a12ec97301ed8739aaf1d.jpg"
+      },
+      {
+        "episode": "9",
+        "title": "ПОЖАЛУЙСТА, НЕ УТОНИТЕ В РЕКЕ ФАЙЛ 2",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/9/1080/536b25d4b32a1747649a5130a7aa4c7b.m3u8",
+          "hd": "/videos/media/ts/9937/9/720/3fc63addfa8edaac1f901f8453299383.m3u8",
+          "sd": "/videos/media/ts/9937/9/480/28ad2845b06b112c43b97986da93b333.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/9/OvJz4vl8512oes1k__55faf71efd1845b16425ced7ed3a00e6.jpg"
+      },
+      {
+        "episode": "10",
+        "title": "УБИЙСТВО В ПРЕКРАСНЫХ РОЗАХ",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9937/10/1080/557826d0013ff315fa912ab0b9101331.m3u8",
+          "hd": "/videos/media/ts/9937/10/720/e46bbb1a0c614555398c13d0fe065724.m3u8",
+          "sd": "/videos/media/ts/9937/10/480/5d0b3423fa7c15d683b611b4a86a9486.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9937/10/9WNSR715kgr3hubA__62b45bed8ff1c50d3b8b14b99fbb6703.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Жизнь ниндзя и убийцы",
+    "title_ru": "Жизнь ниндзя и убийцы",
+    "image": "/storage/releases/posters/9930/mDXurEVQzyPGTXLF5iw3WkoqgQuwRmqT.jpg",
+    "genre": "Повседневность, Сёнен",
+    "status": "В работе",
+    "description": "Куноичи Сатоко Кусагакурэ покидает свою деревню ниндзя и оказывается в городе, где встречается с Конохой — старшеклассницей, работающей наёмной убийцей. Сатоко владеет особым искусством ниндзюцу, позволяющим ей изменять материальную сущность объектов, так что девушки заключают сделку: Коноха предоставляет куноичи жильё, а взамен та помогает ей скрывать следы после выполненных заказов.  \r\nСражаясь с врагами из деревни Сатоко, наслаждаясь вкусными блюдами на деньги от убийств, и находясь в вечном напряжении от такого необычного соседства, Сатоко и Коноха продолжают жить вместе, и создают историю, полную безумных, но тёплых моментов.",
+    "description_ru": "Куноичи Сатоко Кусагакурэ покидает свою деревню ниндзя и оказывается в городе, где встречается с Конохой — старшеклассницей, работающей наёмной убийцей. Сатоко владеет особым искусством ниндзюцу, позволяющим ей изменять материальную сущность объектов, так что девушки заключают сделку: Коноха предоставляет куноичи жильё, а взамен та помогает ей скрывать следы после выполненных заказов.  \r\nСражаясь с врагами из деревни Сатоко, наслаждаясь вкусными блюдами на деньги от убийств, и находясь в вечном напряжении от такого необычного соседства, Сатоко и Коноха продолжают жить вместе, и создают историю, полную безумных, но тёплых моментов.",
+    "rating": "Н/Д",
+    "episodes": [
+      {
+        "episode": "1",
+        "title": "Встреча ниндзя и убийцы",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9930/1/1080/86dea71cacfae6830f2021ed03761e4d.m3u8",
+          "hd": "/videos/media/ts/9930/1/720/8222e2039638fc955536395a8818b913.m3u8",
+          "sd": "/videos/media/ts/9930/1/480/3652b2da9ca01848a646004a63c25aca.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9930/1/tcoVmiCwaK3l31Vx__d31befc3191ad090847ee15e36dbad20.jpg"
+      },
+      {
+        "episode": "2",
+        "title": "Будни ниндзя и убийцы",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9930/2/1080/b45776af3f1e4ba322f5cbcf61b4d1a3.m3u8",
+          "hd": "/videos/media/ts/9930/2/720/ee37af4449558bed29f227ae8293e6f9.m3u8",
+          "sd": "/videos/media/ts/9930/2/480/89540a2181f10551037abb99a2540468.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9930/2/XySzjbVfF4MbC36Y__53d45c02fe2aa949da04a258cb02f742.jpg"
+      },
+      {
+        "episode": "3",
+        "title": "Работа ниндзя и убийцы",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9930/3/1080/76e57606ef0513f167c5a22ef8521413.m3u8",
+          "hd": "/videos/media/ts/9930/3/720/aaeb83c8b7d291498d402c4195fa2733.m3u8",
+          "sd": "/videos/media/ts/9930/3/480/8d2a7c473141a438e8632c2e93a571da.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9930/3/G3z3FLZjWHKdRnMn__51845a5920a1d1a010191d832bf7c8c3.jpg"
+      },
+      {
+        "episode": "4",
+        "title": "Отношения между ниндзя и убийцей",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9930/4/1080/843c1069548b92f62baf4caacf502a20.m3u8",
+          "hd": "/videos/media/ts/9930/4/720/a70e2c3deff784a89146bece660a7078.m3u8",
+          "sd": "/videos/media/ts/9930/4/480/63a9243b4a2069e93d208c194d05eb6a.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9930/4/3sEQeFLpqZOee1RX__c922b78bbe262e1ef856cf62fca70c6e.jpg"
+      },
+      {
+        "episode": "5",
+        "title": "Жизнь робота и убийцы",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9930/5/1080/63307e4ab63bf61ea93052089cf9688e.m3u8",
+          "hd": "/videos/media/ts/9930/5/720/f0dab3a8a66cda018337065219880323.m3u8",
+          "sd": "/videos/media/ts/9930/5/480/8400d25819510c9372b9104d334eee25.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9930/5/cGV3T7UVyF2RQuyR__e947a641bc7ca16412125953060ad50f.jpg"
+      },
+      {
+        "episode": "6",
+        "title": "Жизнь пышногрудой ниндзя и убийцы",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9930/6/1080/9a836dc02e6ce7f2dc0f4e6f08cc9aa3.m3u8",
+          "hd": "/videos/media/ts/9930/6/720/f146cab43a427b2413ae4f51a4494381.m3u8",
+          "sd": "/videos/media/ts/9930/6/480/050ac2c682cd8a8f267d2ebf4bd951ae.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9930/6/DfZNquEU2m9boP4F__cbfbeab98c026b0a2e0cb17c745747e3.jpg"
+      },
+      {
+        "episode": "7",
+        "title": "Убийца и её подруга-одноклассница",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9930/7/1080/38cd3d7c0b5ec6d30db81ef5a6ff1f4a.m3u8",
+          "hd": "/videos/media/ts/9930/7/720/59fa7656df8fb8e9d4d02b21cfcb23b0.m3u8",
+          "sd": "/videos/media/ts/9930/7/480/abc527f06ac51ab30f045f446ddca7f3.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9930/7/TBgOJuIOAzkodLCO__98e9ee5d18f13c36b5a68015de4e16f4.jpg"
+      },
+      {
+        "episode": "8",
+        "title": "Большой дом ниндзя и убийцы",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9930/8/1080/99280fed4abcccb442c317870578df2d.m3u8",
+          "hd": "/videos/media/ts/9930/8/720/6e5fbf5254a09e671bf7dcf7b92f43e7.m3u8",
+          "sd": "/videos/media/ts/9930/8/480/c597f41ef0e93adab29836320688474f.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9930/8/irJ4V4TYpOYqLE2l__7b97e16d5e00e27dc831680dec3d4ba1.jpg"
+      },
+      {
+        "episode": "9",
+        "title": "Эксперимент ниндзя и убийцы",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9930/9/1080/e8e531652bbb7847281f7ac1247f6702.m3u8",
+          "hd": "/videos/media/ts/9930/9/720/8732d7867186376d9650606bc0e083bb.m3u8",
+          "sd": "/videos/media/ts/9930/9/480/08936571b2f16a8d4b3296be4fe4357a.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9930/9/aJ7aE3UnYCTZ1to9__4b6755cb60c3ff643f392c87e3c3463d.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Может ли существовать дружба между мужчиной и женщиной? (Нет, это не так!)",
+    "title_ru": "Может ли существовать дружба между мужчиной и женщиной? (Нет, это не так!)",
+    "image": "/storage/releases/posters/9904/PKNx5e34iOD7BjJIOhPqW1zExpa803er.jpg",
+    "genre": "Комедия, Романтика, Школа",
+    "status": "В работе",
+    "description": "Найти человека, с которым можно быть самим собой — это не так просто. Настоящая дружба требует времени, усилий и взаимного доверия. К счастью, не каждый человек лишён этой радости.\r\nНаши герои — яркий пример того, что настоящая дружба существует. Они вместе стремятся к своей мечте, ухаживают за цветами в школьном клубе садоводства и всегда готовы поддержать друг друга.\r\nХимари — светлая девушка, которая ещё не познала любовь, а Ю — тихий парень, увлечённый миром растений. Казалось бы, их дружба крепка, как корни старого дерева. Но всё меняется, когда Ю встречает свою первую любовь из прошлого. Внезапно мир Химари переворачивается: она начинает понимать, что её чувства к Ю гораздо глубже, чем просто дружеские.\r\nСможет ли Химари признаться в своих чувствах? Сможет ли она освободиться от роли «идеальной подруги» и найти своё собственное счастье? Ответы на эти вопросы вы найдёте в этой трогательной истории о любви, дружбе и взрослении.",
+    "description_ru": "Найти человека, с которым можно быть самим собой — это не так просто. Настоящая дружба требует времени, усилий и взаимного доверия. К счастью, не каждый человек лишён этой радости.\r\nНаши герои — яркий пример того, что настоящая дружба существует. Они вместе стремятся к своей мечте, ухаживают за цветами в школьном клубе садоводства и всегда готовы поддержать друг друга.\r\nХимари — светлая девушка, которая ещё не познала любовь, а Ю — тихий парень, увлечённый миром растений. Казалось бы, их дружба крепка, как корни старого дерева. Но всё меняется, когда Ю встречает свою первую любовь из прошлого. Внезапно мир Химари переворачивается: она начинает понимать, что её чувства к Ю гораздо глубже, чем просто дружеские.\r\nСможет ли Химари признаться в своих чувствах? Сможет ли она освободиться от роли «идеальной подруги» и найти своё собственное счастье? Ответы на эти вопросы вы найдёте в этой трогательной истории о любви, дружбе и взрослении.",
+    "rating": "Н/Д",
+    "episodes": [
+      {
+        "episode": "1",
+        "title": "Ветреница и принцесса ночи",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/1/1080/0503fad4a7ef84097cadbe07d6345279.m3u8",
+          "hd": "/videos/media/ts/9904/1/720/7b15ffcfbf9a38654c189b60f7155308.m3u8",
+          "sd": "/videos/media/ts/9904/1/480/9f9aed96fe2a6450e4d281243e7e16fa.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/1/PH41JRU6dKepTKl8__5cbee05913de65912748eeedfa49e7f9.jpg"
+      },
+      {
+        "episode": "2",
+        "title": "Гибискус и украшения для волос",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/2/1080/7cdd0363fb54b773de1f476230c77c1f.m3u8",
+          "hd": "/videos/media/ts/9904/2/720/82a844656ff6f9982977a8efab826639.m3u8",
+          "sd": "/videos/media/ts/9904/2/480/c41b492a611b97a37e4610739c59d50c.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/2/uzGq27X1F3USVuBv__aa096bb5ad82c3c468b0aa3e140264c2.jpg"
+      },
+      {
+        "episode": "3",
+        "title": "Тюльпаны и эмоции любви.",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/3/1080/269a1a3b1244939511d823b9ca9b13d5.m3u8",
+          "hd": "/videos/media/ts/9904/3/720/75bde68f72538982dc9f711b95ab9c6b.m3u8",
+          "sd": "/videos/media/ts/9904/3/480/51e729fbf26a74417493037832fd6320.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/3/6tklgngMCAbTNeHF__7ec185babea3fa04c7a5455dd42d5b85.jpg"
+      },
+      {
+        "episode": "4",
+        "title": "Гортензия и новое семя",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/4/1080/b0f9b53baad0ee7302512f36de6abcfd.m3u8",
+          "hd": "/videos/media/ts/9904/4/720/294f6ba11dc5ec7889e34f97dca97b18.m3u8",
+          "sd": "/videos/media/ts/9904/4/480/9c8696cea1dff2b5412bfb392acb09f6.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/4/1TBTJ2BVVALiAoIG__8caa1c01df9f42ad4ec30094231f1697.jpg"
+      },
+      {
+        "episode": "5",
+        "title": "Красавчик и юката с ипомеями",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/5/1080/d78f72c157cad4c7e10497871af52ef8.m3u8",
+          "hd": "/videos/media/ts/9904/5/720/4471a968b7fb4a4c091781be78ab4aa7.m3u8",
+          "sd": "/videos/media/ts/9904/5/480/9936c832961ec94d217593bb973e9564.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/5/6bIKuGF05nk0H5BX__df55876cf3e5ded82498ade1df987cf5.jpg"
+      },
+      {
+        "episode": "6",
+        "title": "Аромат вишнёвого шалфея",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/6/1080/4d20200eaf317d256eab34dcd99a9577.m3u8",
+          "hd": "/videos/media/ts/9904/6/720/26d6230e2e9a5bee5238d772cc461970.m3u8",
+          "sd": "/videos/media/ts/9904/6/480/68f3b4aeda84ce55dbe81233690dba61.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/6/N2whqbLddeXTqTg1__21260601467127f158c54d61b5a0c8ca.jpg"
+      },
+      {
+        "episode": "7",
+        "title": "Расколотый шафран.",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/7/1080/87692aa8cab0177c8cf427873ddfc4a7.m3u8",
+          "hd": "/videos/media/ts/9904/7/720/c0f7eb2ade4b296aa538d81bd5e6dfb8.m3u8",
+          "sd": "/videos/media/ts/9904/7/480/513bd6a3a9455986a1d2f2e03c2abeab.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/7/o8x7gX1c2iAwOKoO__f4d020a7f3e5ee4a36907317ff665cce.jpg"
+      },
+      {
+        "episode": "8",
+        "title": "Цинния и страсть.",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/8/1080/9adf5b0bdbf888423ed2548b16f4d862.m3u8",
+          "hd": "/videos/media/ts/9904/8/720/54d3d9ed52ee2a92f09000f483096480.m3u8",
+          "sd": "/videos/media/ts/9904/8/480/438bdb0378c88ca2a06a0afd9f470cfb.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/8/2Xcw06emzW5uKd1Y__6255d628097f339eabbd0c6e7aa6808e.jpg"
+      },
+      {
+        "episode": "9",
+        "title": "Любовь и шоколадная космея",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/9/1080/bf7460cb8c031f16f37384259268ca6a.m3u8",
+          "hd": "/videos/media/ts/9904/9/720/acbcfc65d4fd619b10a4c24994a2a753.m3u8",
+          "sd": "/videos/media/ts/9904/9/480/7ccf0d2fe8d575447a89acbf34b0e152.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/9/kzHBTGFqejO1UjIC__6bfa5958cd08fc5c21b9671e453c4ae8.jpg"
+      },
+      {
+        "episode": "10",
+        "title": "Смысл подсолнуха",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9904/10/1080/ce40764b37c0aacc68f1011b4c2de7f0.m3u8",
+          "hd": "/videos/media/ts/9904/10/720/6f103d5d6e7ca29245649f951a655fb0.m3u8",
+          "sd": "/videos/media/ts/9904/10/480/6159baf02bbdbe744cb38d2ba131d971.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9904/10/SOeH5xVrDcOKOUGe__9a7688241d9e4ba37c4d3778f3fac70d.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Монолог фармацевта 2",
+    "title_ru": "Монолог фармацевта 2",
+    "image": "/storage/releases/posters/9841/qKQ2P69AFCxgJuhYZ7paTciJoZJLYNIO.jpg",
+    "genre": "Драма, Исторический",
+    "status": "В работе",
+    "description": "Ещё недавно она была простой служанкой, а теперь стала одной из приближённый самого императора!\r\nЭксцентричная девушка по имени Маомао, благодаря своему стойкому характеру и глубоким познаниям в фармацевтике, продолжает строить себе успешную карьеру в императорском дворце.\r\nТеперь перед ней стоит следующая задача: ей надо помогать беременной супруге императора Гёкуё, а именно обеспечить её здоровье и безопасность. И если с первым всё будет более-менее просто, то со вторым могут возникнуть проблемы. Вообще, беременность императрицы должна быть делом строжайшей секретности, но это ведь императорский дворец. Здесь интриги и подлые удары в спину происходят чуть ли не чаще, чем чаепития и официальные приёмы. Так что просто нашей находчивой героине точно не будет.",
+    "description_ru": "Ещё недавно она была простой служанкой, а теперь стала одной из приближённый самого императора!\r\nЭксцентричная девушка по имени Маомао, благодаря своему стойкому характеру и глубоким познаниям в фармацевтике, продолжает строить себе успешную карьеру в императорском дворце.\r\nТеперь перед ней стоит следующая задача: ей надо помогать беременной супруге императора Гёкуё, а именно обеспечить её здоровье и безопасность. И если с первым всё будет более-менее просто, то со вторым могут возникнуть проблемы. Вообще, беременность императрицы должна быть делом строжайшей секретности, но это ведь императорский дворец. Здесь интриги и подлые удары в спину происходят чуть ли не чаще, чем чаепития и официальные приёмы. Так что просто нашей находчивой героине точно не будет.",
+    "rating": "Н/Д",
+    "episodes": [
+      {
+        "episode": "1",
+        "title": "Маомао и Мяумяу",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/1/1080/33314d93af2b78ab5e38666c141c1655.m3u8",
+          "hd": "/videos/media/ts/9841/1/720/db06362b37b080fd188648c40e464f66.m3u8",
+          "sd": "/videos/media/ts/9841/1/480/0b9b21b397386949c4a8ab25bf0f227a.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/1/wfftV9qEiDPfDTIQ__06da656518bea43cf75cc0c1d372682a.jpg"
+      },
+      {
+        "episode": "2",
+        "title": "Караван",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/2/1080/731be9bf151e55d7a83e4cb2a82ba789.m3u8",
+          "hd": "/videos/media/ts/9841/2/720/ec485c2fccd822685c598e0f1b04e1f7.m3u8",
+          "sd": "/videos/media/ts/9841/2/480/534e8a43f1856df50564d4fc8fd52a45.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/2/O9tSVyEYWIQ6ckRK__733a492e93831362be2a8966e695d481.jpg"
+      },
+      {
+        "episode": "3",
+        "title": "Кордицепс",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/3/1080/5ff7f29cdeec65ceb3a4d56cd65889e0.m3u8",
+          "hd": "/videos/media/ts/9841/3/720/d03725f0fda55bd40d4265fde6a2d91c.m3u8",
+          "sd": "/videos/media/ts/9841/3/480/3a6c588cb6ecf3bc81080a8a397df49d.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/3/VRvYfHKRA8zCpvCZ__d0050aea8689e67e264966aec6807ce2.jpg"
+      },
+      {
+        "episode": "4",
+        "title": "Зеркало",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/4/1080/587991ca6d162fcc90c58c83a16d8c2d.m3u8",
+          "hd": "/videos/media/ts/9841/4/720/91bf90e18a6393dfd5831c8fc80f1b2e.m3u8",
+          "sd": "/videos/media/ts/9841/4/480/53b9a8c2f190d7acc81ca66ca756ea3e.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/4/hvWNzEGxwMLiv2cE__7b5dc4aa76900eddda6d367f73be147e.jpg"
+      },
+      {
+        "episode": "5",
+        "title": "Лунная Фея",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/5/1080/8174104adb7ae100a7e1754d375fac7a.m3u8",
+          "hd": "/videos/media/ts/9841/5/720/815ce24ec748355ffa5942faccd70fa4.m3u8",
+          "sd": "/videos/media/ts/9841/5/480/dce6c829fb0b38dcf4e3cf0ae9a80e3a.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/5/OpwLrA1TElyflq2x__7ba9ef3335b49d9c41e5fd215bce0b9a.jpg"
+      },
+      {
+        "episode": "6",
+        "title": "Третий раз в Хрустальном зале",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/6/1080/83766bc42feeae5b8a03f3186dc37952.m3u8",
+          "hd": "/videos/media/ts/9841/6/720/8e3c6f85017d1ad16cbea823d087d981.m3u8",
+          "sd": "/videos/media/ts/9841/6/480/1433892b65990e6948c5de87c28883e6.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/6/znLdbkaW8CIE8f4y__137f19fd213762977958503af6dbf28c.jpg"
+      },
+      {
+        "episode": "7",
+        "title": "Храм Выбора",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/7/1080/f61da7e42161dd42fb3614751553f8b5.m3u8",
+          "hd": "/videos/media/ts/9841/7/720/ecd07d37ab99ccf6e504ea8b5999d632.m3u8",
+          "sd": "/videos/media/ts/9841/7/480/a89516a5ef2451d0a75b1f595b4852d0.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/7/YOxiaLAhBIdHVD4a__9635f2f53beb19f3a62c15e249a3c2d8.jpg"
+      },
+      {
+        "episode": "8",
+        "title": "Вдовствующая императрица",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/8/1080/423a90733b835f6b130a50abb1136f72.m3u8",
+          "hd": "/videos/media/ts/9841/8/720/0205471dad881ba5e3d93e160ad96aad.m3u8",
+          "sd": "/videos/media/ts/9841/8/480/f360da8e8f9c40dfff0b8a398bccd7b9.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/8/cwclHqGFeQBnHtBc__bad92e18a67e51d87d4d4fb0f7b7d402.jpg"
+      },
+      {
+        "episode": "9",
+        "title": "Покойный император",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/9/1080/3424a4e5feb17872e846a581b00fd3a5.m3u8",
+          "hd": "/videos/media/ts/9841/9/720/d353a7bad107ea695129de624ec22c8e.m3u8",
+          "sd": "/videos/media/ts/9841/9/480/2fbf3a40d4d63a99c307a2ede9cfc56c.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/9/exVaEIykfgchzmhQ__0ee714d7a71fcd90e532e8ce9eed6f6a.jpg"
+      },
+      {
+        "episode": "10",
+        "title": "Страшилки",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/10/1080/6fef105557b76d36489aa62f53a6940b.m3u8",
+          "hd": "/videos/media/ts/9841/10/720/9836c584f83a2720db4b6d8ffe00f652.m3u8",
+          "sd": "/videos/media/ts/9841/10/480/caf920af54cf99c0521dffb01bb15fe2.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/10/WTGefECX6gqDIHEM__729a923825f14e4f5d2609532ad05270.jpg"
+      },
+      {
+        "episode": "11",
+        "title": "Охота",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/11/1080/c6fd8c322b40859eda014b6dae2d25d0.m3u8",
+          "hd": "/videos/media/ts/9841/11/720/045c5f72c230b45ad6991731506d6cfe.m3u8",
+          "sd": "/videos/media/ts/9841/11/480/ae742c0ce035b1b40b51c70814e554da.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/11/QhyFwwffQJHfahK3__6bf7bc2d2c80b53a194166fc269d307a.jpg"
+      },
+      {
+        "episode": "12",
+        "title": "Кайдзугецу",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/12/1080/84380bc76584fb0c2a6af3cd3527418f.m3u8",
+          "hd": "/videos/media/ts/9841/12/720/31464cd2fa2ffaeefebe4d5e98165ef8.m3u8",
+          "sd": "/videos/media/ts/9841/12/480/be46bf4841a5a0b6c42b5bbf78929896.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/12/rRpZZKmtQv4ecFsE__8fec811e73a16b2562410a0e13bb6dfc.jpg"
+      },
+      {
+        "episode": "13",
+        "title": "Купальня",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/13/1080/267cb3c894d6f02760e5137d4105ba73.m3u8",
+          "hd": "/videos/media/ts/9841/13/720/d382bf2e01fe49a61d8036e8aa6543c9.m3u8",
+          "sd": "/videos/media/ts/9841/13/480/5e487fdca70cbf4b8ee4db37c4554324.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/13/VJ2vM3b93hSzRZ74__53784bb52fdbee3d73eb66b2bef6a068.jpg"
+      },
+      {
+        "episode": "14",
+        "title": "Танцующий призрак",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/14/1080/3f474c7fc17c6c606dfd12c7692f4697.m3u8",
+          "hd": "/videos/media/ts/9841/14/720/27abbb58e9a4237dd4a73886efd415c5.m3u8",
+          "sd": "/videos/media/ts/9841/14/480/8cabea7b59abc167f666555d3edf6f67.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/14/MdkhoUqRoliLNWyp__1173c8d6efbe03436724d53934f54272.jpg"
+      },
+      {
+        "episode": "15",
+        "title": "Лёд",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/15/1080/880d96ddd065751752a80c2f98d654f2.m3u8",
+          "hd": "/videos/media/ts/9841/15/720/e77e62686befee1087e38f8a24a7ecbd.m3u8",
+          "sd": "/videos/media/ts/9841/15/480/149ed8ed4c49012a521298257a5b2f3a.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/15/msE6hdJlyLqXUDqd__09f122a845b35e99f8e14a58bc7b0b93.jpg"
+      },
+      {
+        "episode": "16",
+        "title": "Гнездо злобы",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/16/1080/4554310535db160a9b36f51f010cd28e.m3u8",
+          "hd": "/videos/media/ts/9841/16/720/ab9ae18bc23dd8523ea26cb42ce2696a.m3u8",
+          "sd": "/videos/media/ts/9841/16/480/41fd727f179bcdba6f2a4658fd97037b.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/16/eedpzyeRgXeM5vmN__129468960893011bb70c6d707ba9a9d9.jpg"
+      },
+      {
+        "episode": "17",
+        "title": "Деревня лис",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/17/1080/0a0a44b83b26e07c1374111db73ace24.m3u8",
+          "hd": "/videos/media/ts/9841/17/720/33e60cc0836fa0ecea17fc94a8a123ee.m3u8",
+          "sd": "/videos/media/ts/9841/17/480/93de0133980eeaa27dd8eb9092e8ef88.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/17/VU0fetfojKvmH8V4__808041f9ca048100029d4347d1bba0ea.jpg"
+      },
+      {
+        "episode": "18",
+        "title": "Фонарики",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/18/1080/2d503c82a9241401232d6ef99bafe4a9.m3u8",
+          "hd": "/videos/media/ts/9841/18/720/345f462602ff14ff4dc95102f2ef8466.m3u8",
+          "sd": "/videos/media/ts/9841/18/480/af91656a136e8192b50cdee3f23c23f6.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/18/QdnueYMRkPZwjBVy__597fcd84dd0c6e890a38e143781a2b14.jpg"
+      },
+      {
+        "episode": "19",
+        "title": "Фестиваль",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/19/1080/17ee24e583224d8f5d9b29a8ca97ea79.m3u8",
+          "hd": "/videos/media/ts/9841/19/720/0f3e46574111554bdd6722e3b48b1f9f.m3u8",
+          "sd": "/videos/media/ts/9841/19/480/1d0a95da323829c01ceea9d7ee770217.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/19/uGqL7FK4DWRbX6Pv__0844694a92405e7ccfe537abd8b13243.jpg"
+      },
+      {
+        "episode": "20",
+        "title": "Крепость",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/20/1080/ab7960874e5d5a898f8e9f4c3746c025.m3u8",
+          "hd": "/videos/media/ts/9841/20/720/e043fe52062b52b733259f22995ed0d1.m3u8",
+          "sd": "/videos/media/ts/9841/20/480/22ac2bcd105d98d98ba2d520ba6e1264.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/20/clHXNGBvCLiGNTbR__eb4c8920ab30ee0a963072b431a8c98a.jpg"
+      },
+      {
+        "episode": "21",
+        "title": "Тайбон",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9841/21/1080/dec2fd15d78649cb8eca7d8df1179557.m3u8",
+          "hd": "/videos/media/ts/9841/21/720/68f1d7e9955e505d49a6965dd523848c.m3u8",
+          "sd": "/videos/media/ts/9841/21/480/5b8c477c4edf7a9120303e7aa5b20a93.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9841/21/9tyzWUCbraegW7Ha__3d0a004b4fe9d574c66cae131fa4fc43.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Ликорис Рекоил: Друзья — похитители времени",
+    "title_ru": "Ликорис Рекоил: Друзья — похитители времени",
+    "image": "/storage/releases/posters/9962/pE9V8B742EqbJtQov9txnYvtqdWtnhmd.jpg",
+    "genre": "Повседневность",
+    "status": "В работе",
+    "description": "None",
+    "description_ru": "None",
+    "rating": "Н/Д",
+    "episodes": [
+      {
+        "episode": "1",
+        "title": "Без паники",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9962/1/1080/4b3daef5136d5ce69a71548542eb3a0f.m3u8",
+          "hd": "/videos/media/ts/9962/1/720/be01be083ec8d994ed696f767cd0a924.m3u8",
+          "sd": "/videos/media/ts/9962/1/480/cd22dd01ddaa25d10603862d08a65868.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9962/1/FIUmud54PJBP85Lf__9e27b3915196440aac9f55fe9a3410a0.jpg"
+      },
+      {
+        "episode": "2",
+        "title": "Далеко-далеко",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9962/2/1080/e13f5918482fbfcce74be4c7ba576ea9.m3u8",
+          "hd": "/videos/media/ts/9962/2/720/da5048472ecff6f89f98f88479983e81.m3u8",
+          "sd": "/videos/media/ts/9962/2/480/02cc4810db6253475d3963e1b2c98cb2.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9962/2/cP3iZnePrFyQgBPI__5629ad973f79f47bdbc9921b01bbe73d.jpg"
+      },
+      {
+        "episode": "3",
+        "title": "Гениальная идея",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9962/3/1080/d8eb5650fbce1c7dfaf30a27809e0f81.m3u8",
+          "hd": "/videos/media/ts/9962/3/720/28566bc60d13034aeab5aa81a3c10326.m3u8",
+          "sd": "/videos/media/ts/9962/3/480/d2c59873e8f70114cdf53389fab41ca9.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9962/3/lt5KjbOmYEmXnOTl__22f7c847dd7411a387894d5a974636c5.jpg"
+      },
+      {
+        "episode": "4",
+        "title": "Берегись!",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9962/4/1080/fb2a19e6b9ea63e99b36303082f6df8e.m3u8",
+          "hd": "/videos/media/ts/9962/4/720/0012c75c05df2eda8ab54a41ba3b398c.m3u8",
+          "sd": "/videos/media/ts/9962/4/480/01e37a931e3a9b123e6c3443901b92f3.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9962/4/bbQYPLARUf65LiyL__fac41f8fc97e2f60f790a73ef21dff4d.jpg"
+      },
+      {
+        "episode": "5",
+        "title": "Горько-сладкая первая любовь",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9962/5/1080/118dce770a286ac452d10fa0efe7beb7.m3u8",
+          "hd": "/videos/media/ts/9962/5/720/3692c410577e358bf777ade059e0fc9e.m3u8",
+          "sd": "/videos/media/ts/9962/5/480/32e41b736561bcfaa6ea87a272297e9c.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9962/5/jkTeyVRIZX3eSOdR__fbce0730f5a71f2fa8d732ba54c7781f.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Мобильный воин Гандам: GQuuuuuuX",
+    "title_ru": "Мобильный воин Гандам: GQuuuuuuX",
+    "image": "/storage/releases/posters/9954/JFdRFrgaRkC8oyOgl2C8zPLZKSPkjGIQ.jpg",
+    "genre": "Меха, Фантастика, Экшен",
+    "status": "В работе",
+    "description": "Далёкое будущее. Глубокий космос. Мирное время после войны. Одна космическая колония, каких сотни по всей Солнечной системе. А на маленькой колонии начинается большая история о студентке академии Юхурихе Аматэ и военной беженке Наян, которые волей-неволей оказываются втянуты в нелегальные бои на мехах - Битва Кланов. А машина у Аматэ оказывается непростая. За этим Гандамом охотятся все: от полиции до военных. Под лязг тяжёлого металла и грохота пушек начинается опасная гонка, от которой можно буквально потерять голову.",
+    "description_ru": "Далёкое будущее. Глубокий космос. Мирное время после войны. Одна космическая колония, каких сотни по всей Солнечной системе. А на маленькой колонии начинается большая история о студентке академии Юхурихе Аматэ и военной беженке Наян, которые волей-неволей оказываются втянуты в нелегальные бои на мехах - Битва Кланов. А машина у Аматэ оказывается непростая. За этим Гандамом охотятся все: от полиции до военных. Под лязг тяжёлого металла и грохота пушек начинается опасная гонка, от которой можно буквально потерять голову.",
+    "rating": "Н/Д",
+    "episodes": [
+      {
+        "episode": "1",
+        "title": "Красный Гандам",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9954/1/1080/20cee75a62b9b314f79b29412c0a3a60.m3u8",
+          "hd": "/videos/media/ts/9954/1/720/9204bbd6d24c415dfb702fb1ea07187f.m3u8",
+          "sd": "/videos/media/ts/9954/1/480/2a321c7c26037d54734610bf2b7127e2.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9954/1/hUr0IYyGx6rKkDOQ__329507fd28573ea7ba4d8184d650b2e9.jpg"
+      },
+      {
+        "episode": "2",
+        "title": null,
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9954/2/1080/c4426cc5ae277129b42c7f24bc7b1b86.m3u8",
+          "hd": "/videos/media/ts/9954/2/720/c4843d965f4f4557e629938c842fa81b.m3u8",
+          "sd": "/videos/media/ts/9954/2/480/0df8ae5ef23a2afc12777ab150ba0b0c.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9954/2/iVl32gI6267w0uLU__3879fd09d0f97545ef06b0fb53f6c211.jpg"
+      },
+      {
+        "episode": "3",
+        "title": "МАЧУ В БИТВЕ КЛАНОВ",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9954/3/1080/3c61121658b4d2e1ae96faadfbec2994.m3u8",
+          "hd": "/videos/media/ts/9954/3/720/36963bed0bda156e4d1a1eac43be7e6b.m3u8",
+          "sd": "/videos/media/ts/9954/3/480/660622440a7818ef6041b6a6748da7de.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9954/3/VmdUqcoSPvmwVY9f__342a02b24b35b7f87bbf4daf81ace547.jpg"
+      },
+      {
+        "episode": "4",
+        "title": "Война Ведьм",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9954/4/1080/39c2327fd5bfd912fc01d04ca6d007f4.m3u8",
+          "hd": "/videos/media/ts/9954/4/720/20bffc67de37996b435bc53808df4e22.m3u8",
+          "sd": "/videos/media/ts/9954/4/480/c943b815ce6378466428857c72eeb133.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9954/4/29gXeYxCpdHDkPCH__eb8a7aa666f8edac1a36777448c9759b.jpg"
+      },
+      {
+        "episode": "5",
+        "title": "Няан не знает о Кира-Кира!",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9954/5/1080/a5064f0dbf9d6f144cd1bdde916fff78.m3u8",
+          "hd": "/videos/media/ts/9954/5/720/374d9ad364cae8743fc2a46ca4727912.m3u8",
+          "sd": "/videos/media/ts/9954/5/480/3d73d08cb781610944f5d7327c992a6b.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9954/5/bvOOfitOpb7nXaeQ__bd761ca9f531d4718fcc8ad5be3d1de1.jpg"
+      },
+      {
+        "episode": "6",
+        "title": "Покушение на Кисилию",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9954/6/1080/5fdaa39a41c549c8e00fb191fd25e00b.m3u8",
+          "hd": "/videos/media/ts/9954/6/720/1b5b1b5a7ae9c0d5958f0ed53f85ce9b.m3u8",
+          "sd": "/videos/media/ts/9954/6/480/7755d755f5cf2d19483d57b6320710e0.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9954/6/SpRpdVIcLOPSqIPZ__0f5bc3d555bcd9a885aa5137bce2a645.jpg"
+      },
+      {
+        "episode": "7",
+        "title": "Восстание Мачу",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9954/7/1080/af863660d1b3de1d16b5abf40ac7c174.m3u8",
+          "hd": "/videos/media/ts/9954/7/720/b9eabf0ad8c7ada542fbe33df09fda5a.m3u8",
+          "sd": "/videos/media/ts/9954/7/480/db81b4bf163e489b1cb450edab4a68f1.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9954/7/JcbSw6bcYK19zgLD__74f24d766e71c1734492c4d376a2f900.jpg"
+      },
+      {
+        "episode": "8",
+        "title": "Падение на Луну",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9954/8/1080/38ca044b0adf232eb3f45f547da3a874.m3u8",
+          "hd": "/videos/media/ts/9954/8/720/a9fe049105ec34da52e28b899b417314.m3u8",
+          "sd": "/videos/media/ts/9954/8/480/97f4db0a2e548f61d05b90851ee2c2fc.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9954/8/8ZS7M4pziydwQPT1__59e972b55ab9c5292724a2e1cfa77478.jpg"
+      },
+      {
+        "episode": "9",
+        "title": "Роза Шэрон",
+        "opening": [],
+        "ending": [],
+        "video": {
+          "fhd": "/videos/media/ts/9954/9/1080/fc6b80fcca471866e9e746dd0d80b5c9.m3u8",
+          "hd": "/videos/media/ts/9954/9/720/ad5418db396cbca9c86ff3cd7a3e5641.m3u8",
+          "sd": "/videos/media/ts/9954/9/480/249dc995cec682bb083e4e65cad4b676.m3u8"
+        },
+        "navi": null,
+        "preview": "/storage/releases/episodes/previews/9954/9/Po0RSFxycLZpHqNg__e2bdb8660bbac269f576ab3ca5dc0b3f.jpg"
+      }
+    ]
+  }
+]
