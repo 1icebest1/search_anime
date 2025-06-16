@@ -2,10 +2,12 @@ import json
 import sys
 import random
 import os
+from pathlib import Path
+
 from PySide6.QtWidgets import (QApplication, QWidget, QHBoxLayout, QVBoxLayout,
                                QStackedWidget, QMessageBox)
 from PySide6.QtCore import Qt, QTimer, QPoint, QRect
-from PySide6.QtGui import QPainter, QColor, QLinearGradient, QPixmap
+from PySide6.QtGui import QPainter, QColor, QLinearGradient, QPixmap, QFontDatabase, QFont
 
 from menu.side_panel import RoundedPanel
 from menu.account import AccountPage
@@ -15,9 +17,14 @@ from menu.recommendation import RecommendationPage
 from menu.setting import SettingsPage
 from menu.help import HelpPage
 from menu.detail import DetailPage
-from script.pars import AnimeLoaderThread
 
+from script.pars import AnimeLoaderThread
 from script.splash import SplashScreen, LoaderThread
+
+# Get absolute path to data directory
+BASE_DIR = Path(__file__).parent
+DATA_DIR = BASE_DIR / "data" / "online"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
 class LoadingOverlay(QWidget):
@@ -45,6 +52,13 @@ class MainWindow(QWidget):
         self.timer.timeout.connect(self.move_stars)
         self.anime_loader = None
         self.loading_overlay = None
+        self.star_count = 15
+
+        # Font management
+        self.current_font = "Anime Ace"
+        self.available_fonts = []
+        self.load_custom_fonts()
+        self.apply_font(self.current_font)
 
         # Main layout
         self.main_layout = QHBoxLayout(self)
@@ -54,6 +68,8 @@ class MainWindow(QWidget):
         # Side panel
         self.panel = RoundedPanel(self)
         self.main_layout.addWidget(self.panel)
+        self.panel.apply_theme(self.current_theme)
+        self.panel.setFixedWidth(self.panel.panel_width + self.panel.handle_width)
 
         # Content area
         self.content_area = QWidget()
@@ -84,42 +100,107 @@ class MainWindow(QWidget):
         # Initialize theme
         QTimer.singleShot(100, lambda: self.apply_theme("space"))
 
+    def propagate_font(self, widget=None):
+        widget = widget or self
+        try:
+            widget.setFont(QFont(self.current_font))
+        except:
+            pass
+
+        for child in widget.children():
+            if isinstance(child, QWidget):
+                self.propagate_font(child)
+
+    def load_custom_fonts(self):
+        fonts_dir = BASE_DIR / "data" / "fonts"
+        self.available_fonts = []
+
+        anime_fonts = [
+            "anime-ace.bold.ttf",
+            "anime-ace.italic.ttf",
+            "anime-ace.regular.ttf"
+        ]
+
+        if fonts_dir.exists() and fonts_dir.is_dir():
+            for font_file in anime_fonts:
+                font_path = fonts_dir / font_file
+                if font_path.exists():
+                    try:
+                        font_id = QFontDatabase.addApplicationFont(str(font_path))
+                        if font_id != -1:
+                            families = QFontDatabase.applicationFontFamilies(font_id)
+                            if families:
+                                for family in families:
+                                    if family not in self.available_fonts:
+                                        self.available_fonts.append(family)
+                    except:
+                        pass
+
+            for ext in ["*.ttf", "*.otf"]:
+                for font_file in fonts_dir.glob(ext):
+                    if font_file.name not in anime_fonts:
+                        try:
+                            font_id = QFontDatabase.addApplicationFont(str(font_file))
+                            if font_id != -1:
+                                families = QFontDatabase.applicationFontFamilies(font_id)
+                                if families:
+                                    for family in families:
+                                        if family not in self.available_fonts:
+                                            self.available_fonts.append(family)
+                        except:
+                            pass
+
+        if not self.available_fonts:
+            self.available_fonts.extend(["Arial", "Times New Roman", "Courier New", "Comic Sans MS"])
+
+        self.available_fonts = sorted(set(self.available_fonts))
+
+    def apply_font(self, font_name):
+        self.current_font = font_name
+        font = QFont(font_name)
+        QApplication.instance().setFont(font)
+        self.propagate_font()
+
     def show_anime_details(self, anime_data):
-        self.pages["detail"].set_data(anime_data)
+        detail_page = self.pages["detail"]
+        detail_page.set_data(anime_data)
+        detail_page.apply_theme(self.current_theme)
         self.switch_page("detail")
-        self.pages["detail"].back_callback = lambda: self.switch_page("home")
-        self.pages["detail"].main_window = self
+        detail_page.back_callback = lambda: self.switch_page("home")
+        detail_page.main_window = self
 
     def on_parsing_finished(self):
         self.pages["home"].load_anime_data()
+        self.cleanup_loader()
+
+    def load_random_anime(self):
+        try:
+            # Only create new overlay if needed
+            if not hasattr(self, 'loading_overlay') or not self.loading_overlay:
+                self.loading_overlay = LoadingOverlay(self)
+            self.loading_overlay.show()
+
+            # Create new loader instance for random anime
+            random_loader = AnimeLoaderThread()
+            random_loader.mode = "random"
+            random_loader.random_data_loaded.connect(self.handle_random_data)
+            random_loader.error_occurred.connect(self.show_error)
+            random_loader.finished.connect(self.cleanup_loader)
+            random_loader.start()
+
+        except Exception as e:
+            self.cleanup_loader()
+            self.show_error(str(e))
+            self.pages["explore"].load_demo_data()
+
+    def cleanup_loader(self):
+        """Clean up loader resources"""
         if self.loading_overlay:
             self.loading_overlay.hide()
             self.loading_overlay.deleteLater()
             self.loading_overlay = None
 
-    def load_random_anime(self):
-        """Load random anime data from API with proper error handling"""
-        try:
-            if not hasattr(self, 'loading_overlay') or not self.loading_overlay:
-                self.loading_overlay = LoadingOverlay(self)
-            self.loading_overlay.show()
-
-            self.anime_loader = AnimeLoaderThread()
-            self.anime_loader.mode = "random"
-            self.anime_loader.random_data_loaded.connect(self.handle_random_data)
-            self.anime_loader.error_occurred.connect(self.show_error)
-            self.anime_loader.finished.connect(lambda: self.loading_overlay.hide())
-            self.anime_loader.start()
-
-        except Exception as e:
-            print(f"Error starting loader: {e}")
-            if self.loading_overlay:
-                self.loading_overlay.hide()
-            self.show_error(str(e))
-            self.pages["explore"].load_demo_data()
-
     def handle_random_data(self, data):
-        """Handle received random anime data"""
         self.pages["explore"].create_anime_cards(data)
 
     def show_error(self, message):
@@ -161,6 +242,11 @@ class MainWindow(QWidget):
         self.setStyleSheet(theme_styles[theme_name])
         self.update_background_pixmap()
         self.update_space_effect()
+        self.panel.apply_theme(theme_name)
+        self.propagate_font()
+
+        if "detail" in self.pages:
+            self.pages["detail"].apply_theme(theme_name)
 
     def update_background_pixmap(self):
         if self.current_theme == "space" and self.width() > 0 and self.height() > 0:
@@ -177,16 +263,19 @@ class MainWindow(QWidget):
     def update_space_effect(self):
         if self.current_theme == "space":
             self.stars = [QPoint(random.randint(0, self.width()),
-                                 random.randint(0, self.height()))
-                          for _ in range(30)]
-            self.timer.start(30)
+                             random.randint(0, self.height()))
+                      for _ in range(self.star_count)]
+            self.timer.start(50)
         else:
             self.timer.stop()
 
     def move_stars(self):
-        for i in range(len(self.stars)):
-            self.stars[i].setX((self.stars[i].x() + 2) % self.width())
-        self.update()
+        if self.isVisible() and self.current_theme == "space":
+            for i in range(len(self.stars)):
+                self.stars[i].setX((self.stars[i].x() + 2) % self.width())
+            self.update()
+        else:
+            self.timer.stop()
 
     def resizeEvent(self, event):
         super().resizeEvent(event)
@@ -210,21 +299,22 @@ class MainWindow(QWidget):
 
 if __name__ == "__main__":
     # Configure high DPI settings properly
+    if hasattr(Qt.ApplicationAttribute, 'AA_EnableHighDpiScaling'):
+        QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
+
+    if hasattr(Qt.ApplicationAttribute, 'AA_UseHighDpiPixmaps'):
+        QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
+
     if hasattr(Qt, 'HighDpiScaleFactorRoundingPolicy'):
         QApplication.setHighDpiScaleFactorRoundingPolicy(
             Qt.HighDpiScaleFactorRoundingPolicy.PassThrough
         )
-    if hasattr(Qt, 'AA_EnableHighDpiScaling'):
-        QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
-    if hasattr(Qt, 'AA_UseHighDpiPixmaps'):
-        QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
 
     app = QApplication(sys.argv)
 
-    # Ensure data directory exists with demo data
-    os.makedirs("data/online", exist_ok=True)
-    demo_file = os.path.join("data/online", "random.json")
-    if not os.path.exists(demo_file) or os.path.getsize(demo_file) == 0:
+    # Create demo data with absolute path
+    demo_file = DATA_DIR / "random.json"
+    if not demo_file.exists() or os.path.getsize(demo_file) == 0:
         demo_data = [
             {"image": "test.png", "title": "Космічні Мандрівники"},
             {"image": "test.png", "title": "Таємничий Ліс"},
@@ -254,7 +344,13 @@ if __name__ == "__main__":
         splash.close()
         window.showMaximized()
         window.activateWindow()
-        start_anime_loader()
+
+        # Create and start loader
+        window.anime_loader = AnimeLoaderThread()
+        window.anime_loader.error_occurred.connect(window.show_error)
+        window.anime_loader.finished.connect(window.on_parsing_finished)
+        window.anime_loader.mode = "top"
+        window.anime_loader.start()
 
 
     def handle_progress(value, message):
@@ -263,12 +359,6 @@ if __name__ == "__main__":
         app.processEvents()
         if value == 100:
             QTimer.singleShot(300, handle_finish)
-
-
-    def start_anime_loader():
-        window.anime_loader = AnimeLoaderThread()
-        window.anime_loader.finished.connect(window.on_parsing_finished)
-        window.anime_loader.start()
 
 
     loader.progress_updated.connect(handle_progress)

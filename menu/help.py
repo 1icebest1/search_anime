@@ -10,6 +10,6 @@ class HelpPage(QWidget):
         layout.setAlignment(Qt.AlignCenter)
 
         label = QLabel("Help Center")
-        label.setStyleSheet("font-size: 24px; color: white;")
+        label.setStyleSheet("color: white;")
         label.setAlignment(Qt.AlignCenter)
         layout.addWidget(label)

@@ -3,6 +3,7 @@ from PySide6.QtCore import Qt, QPointF
 from PySide6.QtCharts import QChart, QChartView, QPieSeries, QLineSeries, QValueAxis, QPieSlice
 from PySide6.QtGui import QPainter, QColor, QBrush, QFont, QPen
 
+
 class AccountPage(QWidget):
     def __init__(self):
         super().__init__()
@@ -12,7 +13,6 @@ class AccountPage(QWidget):
         main_layout = QVBoxLayout(self)
         main_layout.setContentsMargins(30, 30, 30, 30)
         main_layout.setSpacing(25)
-
 
         top_bar = QHBoxLayout()
         top_bar.addStretch()
@@ -26,7 +26,6 @@ class AccountPage(QWidget):
                     background: rgba(80, 80, 80, 150);
                     color: white;
                     border-radius: 15px;
-                    font-size: 14px;
                     padding: 8px;
                     border: 2px solid #4CAF50;
                 }
@@ -38,7 +37,6 @@ class AccountPage(QWidget):
         top_bar.addWidget(self.btn_login)
         top_bar.addWidget(self.btn_quit)
         main_layout.addLayout(top_bar)
-
 
         profile_frame = QFrame()
         profile_frame.setStyleSheet("""
@@ -67,7 +65,6 @@ class AccountPage(QWidget):
         stats_text = QLabel("🎬 Загалом переглянуто: 142 серії")
         stats_text.setStyleSheet("""
             color: #bdc3c7;
-            font-size: 16px;
             padding: 15px;
             background: rgba(52, 73, 94, 100);
             border-radius: 15px;
@@ -83,7 +80,6 @@ class AccountPage(QWidget):
         self.nickname = QLabel("Cyber")
         self.nickname.setStyleSheet("""
             color: #ecf0f1;
-            font-size: 28px;
             font-weight: bold;
             padding: 10px;
             background: rgba(44, 62, 80, 150);
@@ -92,7 +88,6 @@ class AccountPage(QWidget):
         profile_layout.addWidget(self.nickname, alignment=Qt.AlignCenter)
 
         main_layout.addWidget(profile_frame)
-
 
         stats_frame = QFrame()
         stats_frame.setStyleSheet("""
@@ -106,7 +101,6 @@ class AccountPage(QWidget):
         stats_title = QLabel("📊 Детальна статистика")
         stats_title.setStyleSheet("""
             color: #2ecc71;
-            font-size: 22px;
             font-weight: bold;
             padding-bottom: 15px;
             border-bottom: 2px solid #3498db;
@@ -119,7 +113,6 @@ class AccountPage(QWidget):
         charts_layout.addWidget(self.create_line_chart())
         stats_layout.addWidget(charts_container)
         main_layout.addWidget(stats_frame)
-
 
     def create_pie_chart(self):
         series = QPieSeries()
@@ -134,7 +127,9 @@ class AccountPage(QWidget):
             slice = QPieSlice(f"{label}\n{value} серій ({percent}%)", percent)
             slice.setColor(QColor(color))
             slice.setLabelColor(Qt.white)
-            slice.setLabelFont(QFont("Arial", 10, QFont.Bold))
+            font = QFont()
+            font.setBold(True)
+            slice.setLabelFont(font)
             slice.setLabelPosition(QPieSlice.LabelOutside)
             slice.setBorderColor(QColor(color))
             slice.setBorderWidth(2)
@@ -143,7 +138,9 @@ class AccountPage(QWidget):
         chart = QChart()
         chart.addSeries(series)
         chart.setTitle("Прогрес переглядів (загалом: 220 серій)")
-        chart.setTitleFont(QFont("Arial", 12, QFont.Bold))
+        font = QFont()
+        font.setBold(True)
+        chart.setTitleFont(font)
         chart.setTitleBrush(QColor("#ffffff"))
         chart.setBackgroundBrush(QBrush(Qt.transparent))
         chart.legend().setVisible(True)
@@ -166,7 +163,9 @@ class AccountPage(QWidget):
         chart = QChart()
         chart.addSeries(series)
         chart.setTitle("Щоденна активність")
-        chart.setTitleFont(QFont("Arial", 12, QFont.Bold))
+        font = QFont()
+        font.setBold(True)
+        chart.setTitleFont(font)
         chart.setTitleBrush(QColor("#ffffff"))
         chart.setAnimationOptions(QChart.SeriesAnimations)
 

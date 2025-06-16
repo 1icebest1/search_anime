@@ -1,13 +1,13 @@
-# recommendation.py
 from PySide6.QtWidgets import (
     QFrame, QGridLayout, QLabel, QWidget, QVBoxLayout,
     QGraphicsPixmapItem, QGraphicsScene, QGraphicsView
 )
-from PySide6.QtGui import QPixmap, QPainter
+from PySide6.QtGui import QPixmap, QPainter, QColor
 from PySide6.QtCore import Qt
 import json
 import os
 import requests
+from pathlib import Path
 
 
 class RoundedImageLabel(QGraphicsView):
@@ -19,6 +19,7 @@ class RoundedImageLabel(QGraphicsView):
         pixmap = self.load_pixmap(image_path)
         pixmap = pixmap.scaled(240, 360, Qt.IgnoreAspectRatio, Qt.SmoothTransformation)
 
+        # Create mask for rounded corners
         mask = QPixmap(240, 360)
         mask.fill(Qt.transparent)
         painter = QPainter(mask)
@@ -27,6 +28,7 @@ class RoundedImageLabel(QGraphicsView):
         painter.drawRoundedRect(0, 0, 240, 360, radius, radius)
         painter.end()
 
+        # Apply mask
         pixmap.setMask(mask.createMaskFromColor(Qt.transparent))
 
         scene = QGraphicsScene()
@@ -35,26 +37,45 @@ class RoundedImageLabel(QGraphicsView):
         self.setAlignment(Qt.AlignCenter)
 
     def load_pixmap(self, image_path):
-        # Додаємо базовий URL для шляхів з anilibria.tv
-        if image_path.startswith("/"):
-            image_path = f"https://anilibria.tv{image_path}"
+        # Handle relative paths
+        if not image_path or not isinstance(image_path, str):
+            return self.create_placeholder()
 
-        if image_path.startswith("http"):
-            try:
-                response = requests.get(image_path, timeout=10)
-                response.raise_for_status()
-                pixmap = QPixmap()
-                pixmap.loadFromData(response.content)
-                return pixmap
-            except Exception as e:
-                print(f"Помилка завантаження зображення: {e}")
-                return QPixmap("images/default_image.jpg")
+        # Fix relative URLs
+        if image_path.startswith("//"):
+            image_url = "https:" + image_path
+        elif image_path.startswith("/") and not image_path.startswith("//"):
+            image_url = "https://anilibria.tv" + image_path
+        elif image_path.startswith("http"):
+            image_url = image_path
         else:
-            # Обробка локальних шляхів
-            full_path = os.path.abspath(image_path)
-            if not os.path.exists(full_path):
-                return QPixmap("images/default_image.jpg")
-            return QPixmap(full_path)
+            # Try local file
+            base_dir = Path(__file__).parent.parent
+            local_path = base_dir / image_path
+            if local_path.exists():
+                return QPixmap(str(local_path))
+            return self.create_placeholder()
+
+        try:
+            response = requests.get(image_url, timeout=10)
+            response.raise_for_status()
+            pixmap = QPixmap()
+            pixmap.loadFromData(response.content)
+            if pixmap.isNull():
+                return self.create_placeholder()
+            return pixmap
+        except Exception as e:
+            print(f"Помилка завантаження зображення: {e}")
+            return self.create_placeholder()
+
+    def create_placeholder(self):
+        pixmap = QPixmap(240, 360)
+        pixmap.fill(QColor(60, 60, 80))
+        painter = QPainter(pixmap)
+        painter.setPen(QColor(200, 200, 255))
+        painter.drawText(pixmap.rect(), Qt.AlignCenter, "Image\nNot Found")
+        painter.end()
+        return pixmap
 
 
 class AnimeCard(QFrame):
@@ -74,6 +95,7 @@ class AnimeCard(QFrame):
             border: none;
         """)
 
+        # Create rounded mask
         mask = QPixmap(240, 360)
         mask.fill(Qt.transparent)
         painter = QPainter(mask)
@@ -89,6 +111,10 @@ class AnimeCard(QFrame):
         grid = QGridLayout(container)
         grid.setContentsMargins(0, 0, 0, 0)
 
+        # Ensure image exists
+        if "image" not in self.data:
+            self.data["image"] = "default.jpg"
+
         rounded_image = RoundedImageLabel(self.data.get("image", ""), radius=20)
         grid.addWidget(rounded_image, 0, 0)
 
@@ -101,7 +127,6 @@ class AnimeCard(QFrame):
         text_label.setStyleSheet("""
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
-            font-size: 17px;
             padding: 5px;
             border-radius: 5px;
         """)
@@ -125,7 +150,6 @@ class RecommendationPage(QWidget):
         label = QLabel('RECOMMEND')
         label.setStyleSheet("""
             color: black;
-            font-size: 42px;
             font-weight: bold;
             background: transparent;
             margin-bottom: -20px;
@@ -152,7 +176,6 @@ class RecommendationPage(QWidget):
         self.overlay_label = QLabel("RECOMMEND", self)
         self.overlay_label.setStyleSheet("""
             color: black;
-            font-size: 42px;
             font-weight: bold;
             background: transparent;
         """)
@@ -167,29 +190,51 @@ class RecommendationPage(QWidget):
         self.overlay_label.setGeometry(0, 0, self.width(), 60)
 
     def load_anime_data(self):
+        # Clear existing widgets
         for i in reversed(range(self.grid.count())):
-            if widget := self.grid.itemAt(i).widget():
+            widget = self.grid.itemAt(i).widget()
+            if widget:
                 widget.deleteLater()
 
         file_path = "data/online/rec_anime.json"
         self.anime_list = []
 
         try:
-            if not os.path.exists(file_path):
-                return
+            base_dir = Path(__file__).parent.parent
+            full_path = base_dir / file_path
 
-            with open(file_path, "r", encoding="utf-8") as f:
+            if not full_path.exists():
+                raise FileNotFoundError("Data file not found")
+
+            with open(full_path, "r", encoding="utf-8") as f:
                 content = f.read()
                 if not content.strip():
-                    return
+                    raise ValueError("Empty data file")
 
                 self.anime_list = json.loads(content)
                 if not isinstance(self.anime_list, list):
-                    raise ValueError("Дані не є списком")
+                    raise ValueError("Data is not a list")
 
+            # Create cards
             for i, anime in enumerate(self.anime_list[:8]):
+                if not isinstance(anime, dict):
+                    continue
+
+                # Ensure required fields
+                if "image" not in anime:
+                    anime["image"] = "default.jpg"
+                if "title" not in anime:
+                    anime["title"] = "Unknown Title"
+
                 card = AnimeCard(self, anime, self.parent)
                 self.grid.addWidget(card, i // 4, i % 4)
 
         except Exception as e:
             print(f"Помилка: {e}")
+            # Create placeholder cards
+            for i in range(8):
+                card = AnimeCard(self, {
+                    "title": f"Placeholder {i + 1}",
+                    "image": "default.jpg"
+                }, self.parent)
+                self.grid.addWidget(card, i // 4, i % 4)

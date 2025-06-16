@@ -11,7 +11,7 @@ import os
 import random
 import requests
 from pathlib import Path
-from script.pars import AnimeLoaderThread
+
 
 class RoundedImageLabel(QGraphicsView):
     def __init__(self, parent=None):
@@ -390,27 +390,10 @@ class ExplorePage(QWidget):
         if self.main_window:
             self.main_window.load_random_anime()
 
-    def on_random_button_clicked(self):
-        try:
-            self.show_true_random()
-        except Exception as e:
-            print("Помилка при показі випадкових аніме:", e)
-
     def show_true_random(self):
-        try:
-            if not self.all_anime_data:
-                print("Дані порожні")
-                return
-
-            shuffled_data = self.all_anime_data.copy()
-            random.shuffle(shuffled_data)
-            self.create_anime_cards(shuffled_data[:12])
-        except Exception as e:
-            print("Помилка в show_true_random:", e)
-
-        shuffled_data = self.all_anime_data.copy()
-        random.shuffle(shuffled_data)
-        self.create_anime_cards(shuffled_data[:12])
+        """Fetch completely new random anime from API"""
+        if self.main_window:
+            self.main_window.load_random_anime()
 
     def show_best_by_genre(self):
         selected_genre = self.genre_combo.currentText()

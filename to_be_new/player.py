@@ -1,126 +1,18 @@
 import os
 import requests
 from PySide6.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout,
-    QLabel, QFrame, QPushButton, QGraphicsView, QGraphicsScene, QGraphicsPixmapItem,
-    QComboBox, QListWidget, QListWidgetItem, QSizePolicy, QSplitter, QSlider
+    QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
+    QLabel, QFrame, QPushButton, QComboBox, QListWidget, QListWidgetItem,
+    QSplitter, QSlider
 )
-from PySide6.QtGui import QPixmap, QPainter, Qt, QAction, QColor
-from PySide6.QtCore import QUrl, Qt, QTime
+from PySide6.QtGui import QPixmap, Qt, QColor
+from PySide6.QtCore import QUrl, Qt, QTime, QTimer, QEvent
 from PySide6.QtMultimedia import QMediaPlayer, QAudioOutput
 from PySide6.QtMultimediaWidgets import QVideoWidget
 import sys
 
 BASE_URL = "https://anilibria.tv"
 CACHE_URL = "https://cache.libria.fun"
-
-
-class RoundedImageLabel(QGraphicsView):
-    def __init__(self, image_path, radius, parent=None):
-        super().__init__(parent)
-        self.setStyleSheet("border: none; background: transparent; padding: 0; margin: 0;")
-        self.setFixedSize(240, 360)
-
-        pixmap = self.load_pixmap(image_path)
-        pixmap = pixmap.scaled(240, 360, Qt.IgnoreAspectRatio, Qt.SmoothTransformation)
-
-        mask = QPixmap(240, 360)
-        mask.fill(Qt.transparent)
-        painter = QPainter(mask)
-        painter.setRenderHint(QPainter.Antialiasing)
-        painter.setBrush(Qt.white)
-        painter.drawRoundedRect(0, 0, 240, 360, radius, radius)
-        painter.end()
-
-        pixmap.setMask(mask.createMaskFromColor(Qt.transparent))
-
-        scene = QGraphicsScene()
-        scene.addItem(QGraphicsPixmapItem(pixmap))
-        self.setScene(scene)
-        self.setAlignment(Qt.AlignCenter)
-
-    def load_pixmap(self, image_path):
-        if image_path.startswith("/"):
-            image_path = f"{BASE_URL}{image_path}"
-
-        if image_path.startswith("http"):
-            try:
-                response = requests.get(image_path, timeout=10)
-                response.raise_for_status()
-                pixmap = QPixmap()
-                pixmap.loadFromData(response.content)
-                return pixmap
-            except Exception as e:
-                print(f"Error loading image: {e}")
-                return self.create_default_pixmap()
-        else:
-            full_path = os.path.abspath(image_path)
-            if not os.path.exists(full_path):
-                return self.create_default_pixmap()
-            return QPixmap(full_path)
-
-    def create_default_pixmap(self):
-        pixmap = QPixmap(240, 360)
-        pixmap.fill(QColor(60, 60, 60))
-        painter = QPainter(pixmap)
-        painter.setPen(Qt.white)
-        painter.drawText(pixmap.rect(), Qt.AlignCenter, "No Image")
-        painter.end()
-        return pixmap
-
-
-class AnimeCard(QFrame):
-    def __init__(self, parent, data, main_window):
-        super().__init__(parent)
-        self.data = data
-        self.main_window = main_window
-        self.setup_ui()
-        self.setCursor(Qt.PointingHandCursor)
-
-    def setup_ui(self):
-        self.setFixedSize(240, 360)
-        self.setAttribute(Qt.WA_TranslucentBackground)
-        self.setStyleSheet("""
-            background: transparent;
-            border-radius: 15px;
-            border: none;
-        """)
-
-        mask = QPixmap(240, 360)
-        mask.fill(Qt.transparent)
-        painter = QPainter(mask)
-        painter.setRenderHint(QPainter.Antialiasing)
-        painter.setBrush(Qt.white)
-        painter.drawRoundedRect(0, 0, 240, 360, 15, 15)
-        painter.end()
-        self.setMask(mask.mask())
-
-        container = QWidget(self)
-        container.setGeometry(0, 0, 240, 360)
-
-        grid = QGridLayout(container)
-        grid.setContentsMargins(0, 0, 0, 0)
-
-        rounded_image = RoundedImageLabel(self.data.get("image", ""), radius=20)
-        grid.addWidget(rounded_image, 0, 0)
-
-        title = self.data.get("title", "No Title")
-        if len(title) > 23:
-            title = title[:20] + "..."
-
-        text_label = QLabel(title)
-        text_label.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
-        text_label.setStyleSheet("""
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-size: 17px;
-            padding: 5px;
-            border-radius: 5px;
-        """)
-        grid.addWidget(text_label, 0, 0)
-
-    def mousePressEvent(self, event):
-        self.main_window.show_anime_details(self.data)
 
 
 class EpisodeItemWidget(QWidget):
@@ -155,7 +47,7 @@ class EpisodeItemWidget(QWidget):
         # Episode info
         info_layout = QVBoxLayout()
         ep_num = QLabel(f"Episode {self.episode_data['episode']}")
-        ep_num.setStyleSheet("font-weight: bold;")
+        ep_num.setStyleSheet("font-weight: bold; color: white;")
 
         title = QLabel(self.episode_data['title'])
         title.setStyleSheet("color: #aaa;")
@@ -170,44 +62,30 @@ class VideoPlayer(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
 
+        # Main layout
+        main_layout = QVBoxLayout(self)
+        main_layout.setContentsMargins(0, 0, 0, 0)
+        main_layout.setSpacing(0)
+
+        # Video widget
+        self.video_widget = QVideoWidget()
+        self.video_widget.setStyleSheet("background-color: black;")
+        self.video_widget.setMinimumSize(640, 360)
+
+        # Media player
         self.media_player = QMediaPlayer()
         self.audio_output = QAudioOutput()
         self.media_player.setAudioOutput(self.audio_output)
-
-        self.video_widget = QVideoWidget()
         self.media_player.setVideoOutput(self.video_widget)
 
-        # Player controls
-        self.play_button = QPushButton("▶")
-        self.play_button.setFixedWidth(40)
-        self.play_button.clicked.connect(self.toggle_play)
+        # Add to layout
+        main_layout.addWidget(self.video_widget)
 
-        self.position_slider = QSlider(Qt.Horizontal)
-        self.position_slider.setRange(0, 0)
-        self.position_slider.sliderMoved.connect(self.set_position)
+        # Set initial volume
+        self.audio_output.setVolume(0.5)
 
-        self.volume_slider = QSlider(Qt.Horizontal)
-        self.volume_slider.setRange(0, 100)
-        self.volume_slider.setValue(50)
-        self.volume_slider.valueChanged.connect(self.set_volume)
-
-        self.status_label = QLabel("Status: Idle")
-        self.time_label = QLabel("00:00 / 00:00")
-
-        # Layout for controls
-        control_layout = QHBoxLayout()
-        control_layout.addWidget(self.play_button)
-        control_layout.addWidget(self.position_slider)
-        control_layout.addWidget(QLabel("Volume:"))
-        control_layout.addWidget(self.volume_slider)
-
-        # Main layout
-        layout = QVBoxLayout()
-        layout.addWidget(self.video_widget, 1)
-        layout.addLayout(control_layout)
-        layout.addWidget(self.time_label)
-        layout.addWidget(self.status_label)
-        self.setLayout(layout)
+        # Create controls overlay
+        self.create_overlay_controls()
 
         # Connect signals
         self.media_player.positionChanged.connect(self.position_changed)
@@ -215,49 +93,163 @@ class VideoPlayer(QWidget):
         self.media_player.playbackStateChanged.connect(self.state_changed)
         self.media_player.errorOccurred.connect(self.handle_error)
 
-        # Set initial volume
-        self.audio_output.setVolume(0.5)
+        # Mouse tracking
+        self.video_widget.setMouseTracking(True)
+        self.video_widget.installEventFilter(self)
 
-    def play_video(self, video_url):
-        """Load and play video from URL"""
-        if not video_url:
-            self.status_label.setText("Error: No video URL provided")
+        # Timer for auto-hide controls
+        self.hide_timer = QTimer(self)
+        self.hide_timer.setInterval(3000)
+        self.hide_timer.timeout.connect(self.hide_controls)
+
+    def create_overlay_controls(self):
+        """Create a simple overlay control panel"""
+        # Container frame
+        self.overlay = QFrame(self.video_widget)
+        self.overlay.setStyleSheet("""
+            background-color: rgba(20, 20, 20, 220); 
+            border-radius: 10px;
+            border: 1px solid #444;
+        """)
+        self.overlay.setFixedSize(500, 180)
+        self.overlay.hide()
+
+        # Layout for overlay
+        layout = QVBoxLayout(self.overlay)
+        layout.setContentsMargins(20, 15, 20, 15)
+        layout.setSpacing(15)
+
+        # Title
+        self.title_label = QLabel("Now Playing")
+        self.title_label.setStyleSheet("""
+            color: white; 
+            font-size: 18px; 
+            font-weight: bold;
+            qproperty-alignment: AlignCenter;
+        """)
+        layout.addWidget(self.title_label)
+
+        # Play button
+        self.play_button = QPushButton("▶")
+        self.play_button.setFixedSize(70, 70)
+        self.play_button.setStyleSheet("""
+            QPushButton {
+                background-color: rgba(50, 150, 50, 200);
+                border: none;
+                border-radius: 35px;
+                color: white;
+                font-size: 32px;
+            }
+            QPushButton:hover {
+                background-color: rgba(70, 170, 70, 220);
+            }
+        """)
+        layout.addWidget(self.play_button, 0, Qt.AlignCenter)
+
+        # Progress bar and time
+        progress_layout = QHBoxLayout()
+        progress_layout.setSpacing(10)
+
+        self.time_label = QLabel("00:00")
+        self.time_label.setStyleSheet("""
+            color: white; 
+            font-size: 14px;
+            min-width: 50px;
+        """)
+        progress_layout.addWidget(self.time_label)
+
+        self.position_slider = QSlider(Qt.Horizontal)
+        self.position_slider.setStyleSheet("""
+            QSlider::groove:horizontal {
+                height: 8px;
+                background: #444;
+                border-radius: 4px;
+            }
+            QSlider::sub-page:horizontal {
+                background: #4CAF50;
+                border-radius: 4px;
+            }
+            QSlider::handle:horizontal {
+                width: 16px;
+                height: 16px;
+                margin: -4px 0;
+                background: white;
+                border-radius: 8px;
+            }
+        """)
+        progress_layout.addWidget(self.position_slider, 1)
+
+        self.duration_label = QLabel("00:00")
+        self.duration_label.setStyleSheet("""
+            color: white; 
+            font-size: 14px;
+            min-width: 50px;
+        """)
+        progress_layout.addWidget(self.duration_label)
+
+        layout.addLayout(progress_layout)
+
+        # Connect button
+        self.play_button.clicked.connect(self.toggle_play)
+        self.position_slider.sliderMoved.connect(self.set_position)
+
+    def eventFilter(self, source, event):
+        """Show controls on mouse move"""
+        if event.type() == QEvent.MouseMove or event.type() == QEvent.Enter:
+            self.show_controls()
+        return super().eventFilter(source, event)
+
+    def show_controls(self):
+        """Show controls and start auto-hide timer"""
+        if self.overlay is None:
             return
 
-        self.status_label.setText("Status: Loading...")
-        QApplication.processEvents()
+        # Position overlay in center
+        x = (self.video_widget.width() - self.overlay.width()) // 2
+        y = (self.video_widget.height() - self.overlay.height()) // 2
+        self.overlay.move(x, y)
+        self.overlay.show()
+        self.overlay.raise_()
+        self.hide_timer.start()
 
+    def hide_controls(self):
+        """Hide controls and stop timer"""
+        if self.overlay and self.overlay.isVisible():
+            self.overlay.hide()
+        self.hide_timer.stop()
+
+    def play_video(self, video_url, title="Anime Episode"):
+        if not video_url:
+            return
+
+        self.title_label.setText(title)
         try:
-            # Check if URL needs base URL prepended
             if video_url.startswith("/"):
-                video_url = CACHE_URL + video_url
+                video_url = f"{CACHE_URL}{video_url}"
 
-            # Set media source
             self.media_player.setSource(QUrl(video_url))
             self.media_player.play()
             self.play_button.setText("⏸")
-            self.status_label.setText("Status: Playing")
+            self.show_controls()
         except Exception as e:
-            self.status_label.setText(f"Error: {str(e)}")
+            print(f"Error playing video: {e}")
 
     def toggle_play(self):
         if self.media_player.playbackState() == QMediaPlayer.PlayingState:
             self.media_player.pause()
             self.play_button.setText("▶")
-            self.status_label.setText("Status: Paused")
         else:
             self.media_player.play()
             self.play_button.setText("⏸")
-            self.status_label.setText("Status: Playing")
+            self.show_controls()
 
     def set_position(self, position):
         self.media_player.setPosition(position)
 
-    def set_volume(self, volume):
-        self.audio_output.setVolume(volume / 100)
-
     def position_changed(self, position):
-        self.position_slider.setValue(position)
+        # Update only if slider is not being dragged
+        if not self.position_slider.isSliderDown():
+            self.position_slider.setValue(position)
         self.update_time_display()
 
     def duration_changed(self, duration):
@@ -265,31 +257,40 @@ class VideoPlayer(QWidget):
         self.update_time_display()
 
     def state_changed(self, state):
-        states = {
-            QMediaPlayer.StoppedState: "Stopped",
-            QMediaPlayer.PlayingState: "Playing",
-            QMediaPlayer.PausedState: "Paused"
-        }
-        self.status_label.setText(f"Status: {states.get(state, 'Unknown')}")
+        if state == QMediaPlayer.PausedState:
+            self.show_controls()
 
     def handle_error(self, error, error_string):
-        self.status_label.setText(f"Error: {error_string}")
+        print(f"Media error: {error_string}")
 
     def update_time_display(self):
         duration = self.media_player.duration()
         position = self.media_player.position()
 
         if duration > 0 and position > 0:
-            duration_time = QTime(0, 0).addMSecs(duration)
-            position_time = QTime(0, 0).addMSecs(position)
-            self.time_label.setText(f"{position_time.toString('mm:ss')} / {duration_time.toString('mm:ss')}")
+            position_time = QTime(0, 0).addMSecs(position).toString('mm:ss')
+            duration_time = QTime(0, 0).addMSecs(duration).toString('mm:ss')
+
+            # Only update if changed
+            if self.time_label.text() != position_time:
+                self.time_label.setText(position_time)
+            if self.duration_label.text() != duration_time:
+                self.duration_label.setText(duration_time)
+
+    def resizeEvent(self, event):
+        # Reposition overlay when window resizes
+        if self.overlay and self.overlay.isVisible():
+            x = (self.video_widget.width() - self.overlay.width()) // 2
+            y = (self.video_widget.height() - self.overlay.height()) // 2
+            self.overlay.move(x, y)
+        super().resizeEvent(event)
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Anime Player")
-        self.resize(1200, 800)
+        self.resize(1200, 700)
         self.setStyleSheet("""
             QMainWindow {
                 background-color: #1a1a1a;
@@ -302,22 +303,21 @@ class MainWindow(QMainWindow):
                 color: white;
                 border: 1px solid #555;
                 padding: 5px;
-                border-radius: 3px;
+                border-radius: 5px;
+                font-size: 14px;
             }
-            QSlider::groove:horizontal {
-                height: 8px;
-                background: #333;
-                border-radius: 4px;
-            }
-            QSlider::handle:horizontal {
-                width: 12px;
-                background: #fff;
-                border-radius: 6px;
+            QComboBox::drop-down {
+                border: none;
             }
             QListWidget {
                 background-color: #252525;
                 border: 1px solid #333;
                 color: white;
+                font-size: 14px;
+            }
+            QSplitter::handle {
+                background-color: #333;
+                width: 2px;
             }
         """)
 
@@ -325,36 +325,69 @@ class MainWindow(QMainWindow):
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         main_layout = QVBoxLayout(central_widget)
+        main_layout.setContentsMargins(15, 15, 15, 15)
+        main_layout.setSpacing(15)
 
         # Top controls
         top_controls = QHBoxLayout()
+        top_controls.setSpacing(15)
+
+        quality_label = QLabel("Quality:")
+        quality_label.setStyleSheet("color: white; font-size: 14px;")
+
         self.quality_combo = QComboBox()
-        self.quality_combo.addItems(["fhd", "hd", "sd"])
-        self.quality_combo.currentTextChanged.connect(self.change_quality)
+        self.quality_combo.addItems(["FHD (1080p)", "HD (720p)", "SD (480p)"])
+        self.quality_combo.setCurrentIndex(0)
+        self.quality_combo.currentIndexChanged.connect(self.change_quality)
+        self.quality_combo.setFixedWidth(150)
 
         self.toggle_episodes_btn = QPushButton("Hide Episodes List")
         self.toggle_episodes_btn.clicked.connect(self.toggle_episodes_list)
+        self.toggle_episodes_btn.setFixedWidth(160)
 
-        top_controls.addWidget(QLabel("Quality:"))
+        top_controls.addWidget(quality_label)
         top_controls.addWidget(self.quality_combo)
         top_controls.addStretch()
         top_controls.addWidget(self.toggle_episodes_btn)
 
         # Main content area
         content_splitter = QSplitter(Qt.Horizontal)
+        content_splitter.setHandleWidth(4)
+        content_splitter.setStyleSheet("""
+            QSplitter::handle {
+                background-color: #444;
+            }
+        """)
 
         # Video player
         self.video_player = VideoPlayer()
 
         # Episodes list
         self.episodes_list = QListWidget()
-        self.episodes_list.setMaximumWidth(300)
+        self.episodes_list.setMinimumWidth(300)
+        self.episodes_list.setMaximumWidth(400)
+        self.episodes_list.setStyleSheet("""
+            QListWidget {
+                background-color: #252525;
+                border: 1px solid #444;
+                border-radius: 8px;
+                color: white;
+                font-size: 14px;
+            }
+            QListWidget::item {
+                border-bottom: 1px solid #333;
+                padding: 8px;
+            }
+            QListWidget::item:selected {
+                background-color: #3a3a3a;
+                border-radius: 5px;
+            }
+        """)
         self.episodes_list.itemClicked.connect(self.on_episode_selected)
 
         content_splitter.addWidget(self.video_player)
         content_splitter.addWidget(self.episodes_list)
-        content_splitter.setStretchFactor(0, 3)
-        content_splitter.setStretchFactor(1, 1)
+        content_splitter.setSizes([700, 300])
 
         # Add to main layout
         main_layout.addLayout(top_controls)
@@ -388,6 +421,12 @@ class MainWindow(QMainWindow):
             ]
         }
 
+        self.quality_map = {
+            "FHD (1080p)": "fhd",
+            "HD (720p)": "hd",
+            "SD (480p)": "sd"
+        }
+
         self.current_quality = "fhd"
         self.current_episode_index = 0
         self.populate_episodes()
@@ -412,16 +451,18 @@ class MainWindow(QMainWindow):
         episode = self.anime_data["episodes"][index]
         video_url = episode["video"].get(self.current_quality)
 
-        if video_url:
-            full_url = CACHE_URL + video_url
-            self.video_player.play_video(full_url)
-        else:
-            self.video_player.status_label.setText(
-                f"Quality {self.current_quality} not available for episode {episode['episode']}"
-            )
+        title = f"Episode {episode['episode']}: {episode['title']}"
+        if len(title) > 60:
+            title = title[:57] + "..."
 
-    def change_quality(self, quality):
-        self.current_quality = quality
+        if video_url:
+            self.video_player.play_video(video_url, title)
+        else:
+            print(f"Quality {self.current_quality} not available for episode {episode['episode']}")
+
+    def change_quality(self, index):
+        quality_text = self.quality_combo.currentText()
+        self.current_quality = self.quality_map.get(quality_text, "fhd")
         self.play_episode(self.current_episode_index)
 
     def toggle_episodes_list(self):

@@ -12,13 +12,21 @@ HEADERS = {
 }
 
 
+def split_title(title_text):
+    """Розділити назву на українську та англійську (якщо є)."""
+    parts = [t.strip() for t in title_text.split('/') if t.strip()]
+    if len(parts) >= 2:
+        return parts[0], parts[1]
+    return title_text.strip(), "Невідомо"
+
+
 def search_anime(query):
     url = f"https://ufdub.com/index.php?do=search&subaction=search&story={requests.utils.quote(query)}"
     r = requests.get(url, headers=HEADERS)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, 'html.parser')
 
-    anime_items = soup.select('.short')  # Блоки з результатами пошуку
+    anime_items = soup.select('.short')
     results = []
 
     for item in anime_items:
@@ -27,6 +35,7 @@ def search_anime(query):
             continue
 
         title_text = title_tag.get_text(separator=" ").strip()
+        title_uk, title_en = split_title(title_text)
         anime_url = title_tag['href']
 
         poster_tag = item.select_one('.short-i img')
@@ -41,6 +50,8 @@ def search_anime(query):
         description = description_tag.get_text(strip=True) if description_tag else ''
 
         results.append({
+            'title_uk': title_uk,
+            'title_en': title_en,
             'title': title_text,
             'url': anime_url,
             'poster': poster_url,
@@ -59,8 +70,7 @@ def extract_js_array(script_text):
     end = script_text.find('];', start)
     if end == -1:
         return None
-    array_str = script_text[start:end + 1]
-    return array_str
+    return script_text[start:end + 1]
 
 
 def get_player_url_and_series(anime_url):
@@ -120,6 +130,8 @@ def save_series_json(anime_id, anime_info, series):
     data = {
         'id': anime_id,
         'title': anime_info['title'],
+        'title_uk': anime_info['title_uk'],
+        'title_en': anime_info['title_en'],
         'url': anime_info['url'],
         'poster': anime_info['poster'],
         'genres': anime_info['genres'],
@@ -171,18 +183,21 @@ def main():
     print(f"Знайдено серій: {len(series)}")
     print("=" * 50)
 
+    filtered_series = []
     if series:
-        print("Серії (назва, тип, пряме посилання на mp4):")
+        print("Серії з прямими посиланнями на mp4:")
         for title, typ, link in series:
             mp4_url = check_video_exists(link)
             if mp4_url:
                 print(f" - {title} | {typ} | {mp4_url}")
+                filtered_series.append((title, typ, mp4_url))
             else:
                 print(f" - {title} | {typ} | [X] Пряме посилання не знайдено")
     else:
         print("Не вдалося знайти список серій")
 
-    save_series_json(selected_anime['url'].split('/')[-1].split('-')[0], selected_anime, series)
+    anime_id = selected_anime['url'].split('/')[-1].split('-')[0]
+    save_series_json(anime_id, selected_anime, filtered_series)
 
     print("=" * 50)
     print("Перевірка завершена")

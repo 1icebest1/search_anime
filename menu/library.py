@@ -6,6 +6,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtGui import QPixmap, QPainter
 from PySide6.QtCore import Qt
 
+
 class RoundedImageLabel(QGraphicsView):
     def __init__(self, image_path, radius=20, parent=None):
         super().__init__(parent)
@@ -33,6 +34,7 @@ class RoundedImageLabel(QGraphicsView):
         scene.addItem(QGraphicsPixmapItem(pixmap))
         self.setScene(scene)
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
 
 class AnimeCard(QFrame):
     def __init__(self, parent, data):
@@ -65,13 +67,13 @@ class AnimeCard(QFrame):
         text_label.setAlignment(Qt.AlignmentFlag.AlignBottom | Qt.AlignmentFlag.AlignHCenter)
         text_label.setStyleSheet("""
             color: white;
-            font-size: 20px;
             font-weight: bold;
             background: transparent;
             padding: 10px;
         """)
         text_label.setWordWrap(True)
         grid.addWidget(text_label, 0, 0)
+
 
 class LibraryPage(QWidget):
     def __init__(self, parent=None):
@@ -93,7 +95,6 @@ class LibraryPage(QWidget):
                 border: 1px solid rgba(255, 255, 255, 0.18);
                 border-radius: 14px;
                 color: white;
-                font-size: 16px;
             }
         """)
         layout.addWidget(search_bar)
@@ -117,7 +118,6 @@ class LibraryPage(QWidget):
                 padding: 18px 30px 12px 30px;
                 margin: 0 120px;
                 border-radius: 20px;
-                font-size: 15px;
                 min-width: 120px;
                 min-height: 45px;
             }

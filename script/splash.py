@@ -2,6 +2,7 @@ import sys
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QLabel, QProgressBar, QApplication, QSizePolicy
 from PySide6.QtCore import Qt, QPropertyAnimation, Property, QThread, Signal, QEvent
 from PySide6.QtGui import QPixmap, QPainter, QColor, QLinearGradient, QFont, QCursor
+from pathlib import Path
 
 
 class SplashScreen(QWidget):
@@ -131,8 +132,6 @@ class AnimatedProgressBar(QProgressBar):
         self.setMaximumWidth(600)
         self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.setTextVisible(False)
-        self.setFocusPolicy(Qt.NoFocus)
-        self.setAttribute(Qt.WA_TransparentForMouseEvents)
 
         self._glow_value = 0.0
         self.animation = QPropertyAnimation(self, b"glow_value")
@@ -146,11 +145,11 @@ class AnimatedProgressBar(QProgressBar):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.Antialiasing)
 
-        # Фон
+        # Background
         painter.setBrush(QColor(50, 50, 70, 150))
         painter.drawRoundedRect(self.rect(), 7, 7)
 
-        # Прогрес
+        # Progress
         progress_width = int(self.width() * (self.value() / 100))
         gradient = QLinearGradient(0, 0, progress_width, 0)
         gradient.setColorAt(0, QColor(100, 150, 255))
@@ -158,7 +157,7 @@ class AnimatedProgressBar(QProgressBar):
         painter.setBrush(gradient)
         painter.drawRoundedRect(0, 0, progress_width, self.height(), 7, 7)
 
-        # Анімація
+        # Animation
         painter.setPen(QColor(255, 255, 255, int(80 * self._glow_value)))
         painter.drawRoundedRect(self.rect(), 7, 7)
 
