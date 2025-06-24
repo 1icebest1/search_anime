@@ -28,7 +28,7 @@ class RoundedImageLabel(QGraphicsView):
         painter.drawRoundedRect(0, 0, 240, 360, radius, radius)
         painter.end()
 
-        # Apply mask
+        # Apply mask1
         pixmap.setMask(mask.createMaskFromColor(Qt.transparent))
 
         scene = QGraphicsScene()
